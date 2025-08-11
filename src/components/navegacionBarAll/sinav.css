@@ -1,0 +1,20 @@
+#slide-out-nav{
+    z-index: 2000;
+    background-color: #005197;
+    border: none;
+}
+.collapsible-header span{
+    font-weight: 600;
+    font-size: 18px !important;
+    color: #eee;
+}
+.collapsible-header{
+    font-weight: 600;
+    font-size: 18px !important;
+}
+#slide-out-nav .collapsible-body a {
+    font-weight: 600;
+    color: #000;
+    border-bottom: 2px solid #eee;
+    background-color: #fff
+}

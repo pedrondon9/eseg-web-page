@@ -1,0 +1,140 @@
+.container-home-carrousel-p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 400px; 
+  background-color: #005197;
+
+}
+
+.container-home-carrousel-p-resp {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+
+ 
+
+}
+
+
+.carrousel-home-item {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-home-carrousel-img {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-home-carrousel-img img {
+  height: 400px;
+  object-fit: contain !important;
+
+}
+
+.owl-next,
+.owl-prev {
+  position: absolute !important;
+  top: 150px;
+  width: 40px;
+  height: 40px;
+  font-size: 60px !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+}
+
+.owl-prev {
+  left: 2px;
+}
+
+.owl-next {
+  right: 2px;
+}
+
+
+.owl-prev span {
+  margin-bottom: 18px;
+  margin-right: 5px;
+  color: #000 !important;
+}
+
+.owl-next span {
+  margin-bottom: 18px;
+  margin-left: 5px;
+  color: #000 !important;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.owl-prev:hover.owl-prev span {
+  color: #fff !important;
+}
+
+.owl-next:hover.owl-next span {
+
+  color: #fff !important;
+}
+
+@media screen and (max-width:1080px) {
+  .container-home-carrousel-p-resp {
+    width: 100%;
+  }
+
+
+  .carrousel-home-item {
+    width: 100%;
+  }
+
+  .container-home-carrousel-img {
+    width: 100%;
+  }
+}
+/*
+@media screen and (max-width:1250px) {
+  .container-home-carrousel-p-resp {
+    width: 100%;
+  }
+
+
+  .carrousel-home-item {
+    width: 100%;
+  }
+
+  .container-home-carrousel-img {
+    width: 100%;
+  }
+}
+*/
+@media screen and (max-width:620px) {
+  .container-home-carrousel-p {
+    height: auto;
+    background-color: #eee;
+  }
+
+  .container-home-carrousel-img img {
+    /*height: 290px;*/
+    height: auto;
+  }
+
+  .owl-next,
+  .owl-prev {
+    display: none !important;
+
+  }
+
+}
+
+

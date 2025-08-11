@@ -1,0 +1,27 @@
+.container-texto-p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container-texto-p-resp{
+    width: 1200px;
+    margin-block: 30px;
+}
+/*
+.container-texto-p-resp h1{
+    color:  !important;
+}*/
+.container-texto-p-resp h5{
+    text-align: center;
+}
+@media screen and (max-width:1250px) {
+    .container-texto-p-resp{
+        width: 100%;
+    }
+}
+@media screen and (max-width:650px) {
+
+}
+@media screen and (max-width:470px) {
+
+}

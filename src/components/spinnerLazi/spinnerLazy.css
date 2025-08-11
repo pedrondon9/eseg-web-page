@@ -1,0 +1,12 @@
+.container-spinner-lazy-p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+}
+.container-spinner-lazy-p p{
+    font-weight: 700;
+    color: #005197;
+}

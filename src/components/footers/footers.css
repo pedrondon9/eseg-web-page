@@ -1,0 +1,113 @@
+.container-footer-p {
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conatainer-footer-link-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.conatainer-footer-link-content-resp {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.conatainer-footer-contents {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conatainer-footer-contents a {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.conatainer-footer-contents a span {
+    margin-left: 10px;
+}
+
+.conatainer-footer-link {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conatainer-footer-link a {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.conatainer-footer-link a span {
+    margin-left: 10px;
+    color: #362a02;
+}
+
+.conatainer-footer-menu {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conatainer-footer-menu a {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.conatainer-footer-menu a span {
+    margin-left: 10px;
+}
+
+@media screen and (max-width:1080px) {
+    .conatainer-footer-link-content-resp {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .conatainer-footer-link-content-resp {
+        flex-direction: column;
+    }
+    .conatainer-footer-contents {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+    .conatainer-footer-link{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-bottom: 20px;  
+    }
+    .conatainer-footer-menu{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-bottom: 20px; 
+    }
+}

@@ -1,0 +1,102 @@
+.conatainer-admin-card-p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conatainer-admin-card-p-resp{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.admin-card{
+    width: 28%;
+    background-color: rgb(224, 223, 223);
+    margin: 10px;
+    border-radius: 5px;
+}
+.admin-card-img{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+.admin-card-img img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+.admin-card-text{
+    text-align: justify;
+    padding-inline: 8px;
+    height: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.admin-card-text .nombre{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.admin-card-text .puesto{
+    font-size: 17px;
+    font-weight: 500;
+    color: #005197;
+}
+
+.text-span-puesto{
+    font-weight: 800;
+    font-size: 16px !important;
+}
+.text-edu-cont{
+    font-weight: 600;
+}
+.text-edu-cont{
+    
+}
+@media screen and (max-width:1250px) {
+    .conatainer-admin-card-p-resp{
+        width: 100%;
+    }
+}
+@media screen and (max-width:950px) {
+    .admin-card{
+        width: 32%;
+        margin: 5px;
+    }
+}
+@media screen and (max-width:750px) {
+    .admin-card{
+        width: 46%;
+        margin: 10px;
+    }
+}
+@media screen and (max-width:590px) {
+    .admin-card{
+        width: 48%;
+        margin: 5px;
+    }
+}
+@media screen and (max-width:550px) {
+    .admin-card{
+        width: 100%;
+    }
+    .admin-card-img{
+        width: 100%;
+        height: auto;
+    }
+    .admin-card-img img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width:400px) {
+    .admin-card{
+        width: 100%;
+        margin-inline: 0px !important;
+        margin-block: 10px;
+    }
+}

@@ -1,0 +1,83 @@
+.container-suscription-p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-suscription-p-resp {
+    max-width: 1200px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px !important;
+}
+
+.suscription-text {
+    width: 57%;
+    display: flex;
+    margin-right: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.suscription-text h5 {
+    color: #004785;
+    text-align: left;
+
+}
+
+.suscription-input {
+    width: 40%;
+}
+
+.suscription-input form {
+    display: flex;
+    flex-direction: row;
+}
+
+.suscription-input form input {
+    border-bottom: 2px solid #005197 !important;
+    box-shadow: none !important;
+    color: #212121;
+    padding-left: 5px !important;
+    font-size: 18px !important;
+}
+
+.suscription-input form input::placeholder {
+    color: rgb(39, 39, 39);
+}
+
+.suscription-input form button {
+    height: 40px;
+    background-color: #005197 !important;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+@media screen and (max-width:1250px) {
+    .suscription-text h5 {
+        margin-left: 5px;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+
+    .suscription-text {
+        width: 95%;
+        margin-right: 0px;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+
+    .suscription-text h5 {
+        text-align: center;
+    }
+
+    .suscription-input {
+        width: 95%;
+    }
+}

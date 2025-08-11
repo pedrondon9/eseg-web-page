@@ -1,0 +1,157 @@
+
+/* ------------------------- */
+/* NAVEGATION BAR */
+/* ------------------------- */
+.contenedor-sticky {
+    position: sticky;
+    top: 0px;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    /*background-color: #F3C304;*/
+    background-color: /*#005197*/#F1B900;
+    z-index: 1000 !important;
+    /*border-top: 2px solid #f1b900c4;*/
+  }
+  
+  .menu-sticky {
+    height: 35px;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .logo-png{
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+  .logo-png a{
+    height: 35;
+    display: flex;
+    align-items: center;
+  }
+  .logo-png img{
+    height: 35px;
+    object-fit: contain;
+    display: none;
+  }
+  .contenedor-enlaces-nav-sticky {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+  
+  }
+  
+  .link-nav-sticky {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
+    padding-inline: 20px;
+  }
+  .link-nav-sticky  a {
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .link-nav-sticky a span {
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+  
+  .dropdown-content-sticky {
+    height: auto;
+    display: none;
+    width: auto;
+    position: absolute;
+    top: 35px;
+    min-width: auto;
+    z-index: 100 !important;
+    transition: 0.5s !important;
+  }
+  .dropdown-content-sticky .collection a {
+    color: #1b1b1b;
+  }
+  .dropdown-content-sticky .collection-1 {
+    float: left;
+    width: auto;
+    margin: 0px 0px;
+    color: #1b1b1b;
+    border-bottom: none;
+    background-color: transparent;
+  }
+  
+  .collection-1 a {
+    display: flex !important;
+    align-items: center !important;
+    color: #000 !important;
+    font-size: 14px !important;
+  }
+  
+  .link-nav-sticky:hover .dropdown-content-sticky {
+    display: block;
+  }
+  .container-icon-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+  }
+  .container-icon-bar a{
+    display: none;
+    margin-top: 6px;
+    color: #000;
+  }
+  @media screen and (max-width:1250px) {
+    .logo-png img{
+      margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width:850px) {
+    .container-icon-bar a{
+      display: block;
+    }
+    .link-nav-sticky{
+      display: none;
+    }
+  }
+  
+  
+  @media screen and (max-width:550px) {
+    .logo-png{
+      height: 45px;
+    }
+    .logo-png a{
+      height: 38;
+    }
+    .logo-png img{
+      height: 30px;
+      object-fit: contain;
+      margin-left: 3px;
+    }
+  }
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+ 
+  
+ 
+  
+ 
+
