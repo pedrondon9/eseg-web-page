@@ -19,7 +19,7 @@ function VerEvents() {
       left: 0,
       top: 0,
       behavior: 'smooth'
-  });
+    });
 
   }, [])
 
@@ -32,7 +32,7 @@ function VerEvents() {
       <div className='conatiner-ver-evento-p'>
         <div className='conatiner-ver-evento-p-resp'>
           <div className='evento-title'>
-            <h4>{dataEvent.titulo}</h4>
+            <h4>{dataEvent?.title}</h4>
           </div>
           <div className='evento-autor'>
             <p><span>Autor</span> : {dataEvent.autor}</p>
@@ -41,11 +41,24 @@ function VerEvents() {
             {/* <img src={dataEvent.imagen1} alt="" srcset="" /> */}
             <LazyLoadImage
               effect="black-and-white"
-              src={dataEvent.imagen1} 
+              src={dataEvent?.linkPhoto}
             />
           </div>
           <div className='evento-descrip'>
-            <h6>{dataEvent.descripcion}</h6>
+            {dataEvent?.content  ? (
+              <div
+                style={{
+                  //backgroundColor: '#fff3e0',
+                  //padding: '5px',
+                  //borderRadius: '5px',
+                  //border: "2px solid rgb(79, 79, 79)"
+                }}
+
+                dangerouslySetInnerHTML={{ __html: dataEvent?.content }  }
+              />
+            ) : (
+              <p>No hay descripción disponible.</p>
+            )}
           </div>
         </div>
       </div>

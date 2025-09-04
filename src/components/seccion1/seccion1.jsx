@@ -69,7 +69,7 @@ function Seccion1() {
                                             <LazyLoadImage
 
                                                 effect="black-and-white"
-                                                src={allEvents[0].imagen1}
+                                                src={allEvents[0]?.linkPhoto}
                                             />
 
 
@@ -77,10 +77,10 @@ function Seccion1() {
                                         <div className='conatainer-seccion1-l-text'>
                                         <div className='conatainer-seccion1-l-text-time'>
                                                 <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[0].createdAt)}</span>
+                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[0]?.createdAt)}</span>
                                             </div>
                                             <p to="#">
-                                                {allEvents[0].titulo.slice(0, 80)}.....
+                                                {allEvents[0]?.title.slice(0, 80)}.....
                                             </p>
                                         </div>
                                     </Link>
@@ -96,7 +96,7 @@ function Seccion1() {
                                             <LazyLoadImage
 
                                                 effect="black-and-white"
-                                                src={allEvents[1].imagen1}
+                                                src={allEvents[1].linkPhoto}
                                             />
 
 
@@ -104,10 +104,10 @@ function Seccion1() {
                                         <div className='conatainer-seccion1-l-text'>
                                             <div className='conatainer-seccion1-l-text-time'>
                                                 <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[1].createdAt)}</span>
+                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[1]?.createdAt)}</span>
                                             </div>
                                             <p to="#">
-                                                {allEvents[1].titulo.slice(0, 80)}.....
+                                                {allEvents[1].title.slice(0, 80)}.....
                                             </p>
                                         </div>
                                     </Link>
@@ -124,7 +124,7 @@ function Seccion1() {
                                             <LazyLoadImage
 
                                                 effect="black-and-white"
-                                                src={allEvents[2].imagen1}
+                                                src={allEvents[2]?.linkPhoto}
                                             />
 
                                         </div>
@@ -134,7 +134,7 @@ function Seccion1() {
                                                 <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[2].createdAt)}</span>
                                             </div>
                                             <p to="#">
-                                                {allEvents[2].titulo.slice(0, 100)}.....
+                                                {allEvents[2]?.title?.slice(0, 100)}.....
                                             </p>
 
 

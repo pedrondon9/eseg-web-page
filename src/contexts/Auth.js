@@ -57,10 +57,10 @@ export default (props) => {
             try {
                 const events = await axios({
                     method: "get",
-                    url: `${URL_SERVER}/get_all_person_profes`
+                    url: `${URL_SERVER}/users/get_web/teacher`
                 })
-                if (events.data) {
-                    setAllProfes(events.data.docs)
+                if (events.data.success) {
+                    setAllProfes(events.data.response)
                     setSpinnerProfes(false)
                     //console.log(events)
     
@@ -82,10 +82,10 @@ export default (props) => {
             try {
                 const events = await axios({
                     method: "get",
-                    url: `${URL_SERVER}/get_all_news`
+                    url: `${URL_SERVER}/events/get`
                 })
-                if (events.data) {
-                    setAllEvents(events.data.docs)
+                if (events.data.success) {
+                    setAllEvents(events.data.response.docs)
                     setSpinnerEvent(false)
                     console.log(events)
     

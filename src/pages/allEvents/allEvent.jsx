@@ -112,7 +112,7 @@ function AllEvent() {
                                                     <LazyLoadImage
 
                                                         effect="black-and-white"
-                                                        src={x.imagen1}
+                                                        src={x?.linkPhoto}
                                                     />
                                                 </div>
                                                 <div className='conatainer-seccion-card-all-event-text'>
@@ -121,7 +121,7 @@ function AllEvent() {
                                                         <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[0].createdAt)}</span>
                                                     </div>
                                                     <p to="#">
-                                                        {x.titulo.slice(0, 100)}.....
+                                                        {x?.title?.slice(0, 100)}.....
                                                     </p>
                                                 </div>
                                             </Link>

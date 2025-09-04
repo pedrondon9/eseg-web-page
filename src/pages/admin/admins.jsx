@@ -48,8 +48,8 @@ function Admins() {
                                                 </div>
                                                 <div className='admin-card-text'>
                                                     <h6 className='nombre'>{/*<span className="text-span-puesto">Nombre : </span>*/}{x.fullname}</h6>
-                                                    <h6 className='puesto'>{/* <span className="text-span-puesto">Puesto : </span>*/}{x.fullname}</h6>
-                                                    <p>{/*<span className="text-edu">Educación : </span>*/}<span className="text-edu-cont">{x.educacion}</span></p>
+                                                    <h6 className='puesto'>{/* <span className="text-span-puesto">Puesto : </span>*/}{x.position}</h6>
+                                                    <p>{/*<span className="text-edu">Educación : </span>*/}<span className="text-edu-cont">{x.brief_description}</span></p>
                                                 </div>
                                             </div>
                                         )
