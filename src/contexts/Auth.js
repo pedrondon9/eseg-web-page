@@ -30,10 +30,11 @@ export default (props) => {
         try {
             const events = await axios({
                 method: "get",
-                url: `${URL_SERVER}/get_all_person_admin`
+                url: `${URL_SERVER}/users/get_web/admin`
             })
-            if (events.data) {
-                setAllPerson(events.data.docs)
+            console.log(events)
+            if (events.data.success) {
+                setAllPerson(events.data.response)
                 setSpinnerPerson(false)
                 //console.log(events)
 
