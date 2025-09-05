@@ -62,7 +62,7 @@ function Seccion1() {
                         {!spinnerEvent ?
                             <>
                                 {allEvents[0] ?
-                                    <Link to="/verEvent" onClick={() => { DataEvent(allEvents[0]) }} className='conatainer-seccion1-l'>
+                                    <Link to={`/verEvent/${allEvents[0]._id}`} onClick={() => { DataEvent(allEvents[0]) }} className='conatainer-seccion1-l'>
                                         <div className='conatainer-seccion1-l-img'>
                                             {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
@@ -89,7 +89,7 @@ function Seccion1() {
                                 }
 
                                 {allEvents[1] ?
-                                    <Link to="/verEvent" onClick={() => { DataEvent(allEvents[1]) }} className='conatainer-seccion1-l'>
+                                    <Link to={`/verEvent/${allEvents[1]._id}`} onClick={() => { DataEvent(allEvents[1]) }} className='conatainer-seccion1-l'>
                                         <div className='conatainer-seccion1-l-img'>
                                             {/* <img src={allEvents[1].imagen1} alt="" /> */}
 
@@ -117,7 +117,7 @@ function Seccion1() {
 
 
                                 {allEvents[2] ?
-                                    <Link to="/verEvent" onClick={() => { DataEvent(allEvents[2]) }} className='conatainer-seccion1-l'>
+                                    <Link to={`/verEvent/${allEvents[2]._id}`}  onClick={() => { DataEvent(allEvents[2]) }} className='conatainer-seccion1-l'>
                                         <div className='conatainer-seccion1-l-img'>
                                             {/* <img src={allEvents[2].imagen1} alt="" /> */}
 

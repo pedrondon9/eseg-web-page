@@ -96,7 +96,6 @@ export default (props) => {
             } catch (error) {
                 setSpinnerEvent(false)
                 setAllEvents([])
-    
             }
     
         }

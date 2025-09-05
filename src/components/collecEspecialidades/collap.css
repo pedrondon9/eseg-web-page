@@ -31,5 +31,5 @@
     padding: 0px !important;
 }
 .conatainer-descricion-p{
-    height: 300px;
+    min-height: 300px;
 }

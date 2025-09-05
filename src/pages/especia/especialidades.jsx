@@ -6,9 +6,38 @@ import CollecEspecialidades from '../../components/collecEspecialidades/collecEs
 import Footers from '../../components/footers/footers'
 import Sinav from '../../components/navegacionBarAll/sideNav'
 import M from 'materialize-css'
+import axios from 'axios'
+import { URL_SERVER } from '../../contexts/constantesVar'
+import CollapsableComp from '../../components/collectCursos/collapsableComp'
+import SpinnerCargar from '../../components/spinnerCarga/spinnerCargar'
 
 function Especialidades() {
+    const [data, setData] = React.useState([])
+    const [spinner, setSpinner] = React.useState(false)
+    const getData = async () => {
+        setSpinner(true)
+        try {
+            const events = await axios({
+                method: "get",
+                url: `${URL_SERVER}/categories/get_web/specialties`
+            })
+            if (events.data.success) {
+                setData(events.data.response)
+                console.log(events.data.response)
+
+            } else {
+                setData([])
+            }
+        } catch (error) {
+            setData([])
+
+        } finally {
+            setSpinner(false)
+        }
+
+    }
     useEffect(() => {
+        getData()
         const collap = document.querySelector('.collapsible')
         M.Collapsible.init(collap, {
             preventScrolling: false,
@@ -20,58 +49,32 @@ function Especialidades() {
             top: 0,
             behavior: 'smooth'
         });
-    })
+    },[])
     return (
         <div>
             <Sinav />
             <BarradeNavegacion />
+            {!spinner ?
+                <>
+                    {data?.map((x, y) =>
+                        <div key={y}>
+                            <TextoTitulo texto={x.name} color="#000" />
+                            <div className='conatainer-collapsable-p'>
+                                <div className='conatainer-collapsable-p-resp'>
+                                    {x?.specialties ?
+                                        <CollapsableComp datos={x.specialties} id={x.name} />
+                                        :
+                                        <></>}
 
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </>
+                :
+                <SpinnerCargar />
 
-            <TextoTitulo texto={"Tecnología-Redes informaticas"} color="#000" />
-            <CollecEspecialidades datos={[
-                "Redes y telecomunicación",
-                "Informática y programación",
-                "Electricidad y electronica industrial"
-            ]} 
-            id="tecnologia"
-            />
-
-
-            <TextoTitulo texto={"Ciencias económicas"} color="#000" />
-            <CollecEspecialidades datos={[
-                "Secretariodo ejecutivo y recursos humanos",
-                "Administración empresarial y contabilidad informatizada",
-                "Economía y comercio internacional",
-                "Bancas y finanzas",
-                "Economía y comercio internacional"
-            ]}
-            id="ceconomicas"
-            />
-
-
-
-            <TextoTitulo texto={"Ciencias sociales"} color="#000" />
-            <CollecEspecialidades
-                datos={[
-                    "Relaciones internacionales y diplomacia",
-                    "Periodismo y comunicacion audiovisual",
-                    "Protocolo diplomático",
-                    "Turismo y cominicación"
-                ]}
-
-                id="csociales"
-            />
-
-
-
-
-            <TextoTitulo texto={"Medicina"} color="#000" />
-            <CollecEspecialidades datos={[
-                "Turismo y cominicación",
-                "Laboratorio",
-            ]}
-            id="medicina"
-            />
+            }
             <Footers />
         </div>
     )

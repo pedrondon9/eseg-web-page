@@ -41,7 +41,7 @@ function App() {
           <Route exact path="/social" element={<Sociales/>} />
           <Route exact path="/qsomos" element={<Qsomos/>} />
           <Route exact path="/allvideos" element={<AllVideos/>} />
-          <Route exact path="/verEvent" element={<VerEvents/>} />
+          <Route exact path="/verEvent/:id" element={<VerEvents/>} />
           <Route exact path="/allEvent" element={<AllEvent/>} />
           <Route exact path="/reglamento" element={<Reglamento/>} />
           <Route exact path="/ventagas" element={<Ventagas/>} />
