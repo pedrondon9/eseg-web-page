@@ -5,7 +5,7 @@ import AppReducer from "./AppReducer";
 import axios from "axios";
 import M from "materialize-css";
 
-import { URL_SERVER } from "./constantesVar";
+import { URL_SERVER, SCHOOL_TENANT } from "./constantesVar";
 
 
 
@@ -30,7 +30,10 @@ export default (props) => {
         try {
             const events = await axios({
                 method: "get",
-                url: `${URL_SERVER}/users/get_web/admin`
+                url: `${URL_SERVER}/users/get_web/admin`,
+                headers: {
+                    'x-access-token': SCHOOL_TENANT
+                }
             })
             console.log(events)
             if (events.data.success) {
@@ -51,82 +54,91 @@ export default (props) => {
     }
 
 
-        /************************************************** */
-        const BringProfes = async () => {
-            setSpinnerProfes(true)
-            try {
-                const events = await axios({
-                    method: "get",
-                    url: `${URL_SERVER}/users/get_web/teacher`
-                })
-                if (events.data.success) {
-                    setAllProfes(events.data.response)
-                    setSpinnerProfes(false)
-                    //console.log(events)
-    
-                } else {
-                    setAllProfes([])
-                    setSpinnerProfes(false)
+    /************************************************** */
+    const BringProfes = async () => {
+        setSpinnerProfes(true)
+        try {
+            const events = await axios({
+                method: "get",
+                url: `${URL_SERVER}/users/get_web/teacher`,
+                headers: {
+                    'x-access-token': SCHOOL_TENANT
                 }
-            } catch (error) {
+            })
+            if (events.data.success) {
+                setAllProfes(events.data.response)
                 setSpinnerProfes(false)
+                //console.log(events)
+
+            } else {
                 setAllProfes([])
-    
+                setSpinnerProfes(false)
             }
-    
+        } catch (error) {
+            setSpinnerProfes(false)
+            setAllProfes([])
+
         }
 
-/*********************************************************************** */
-        const BringEvents = async () => {
-            setSpinnerEvent(true)
-            try {
-                const events = await axios({
-                    method: "get",
-                    url: `${URL_SERVER}/events/get`
-                })
-                if (events.data.success) {
-                    setAllEvents(events.data.response.docs)
-                    setSpinnerEvent(false)
-                    console.log(events)
-    
-                } else {
-                    setAllEvents([])
-                    setSpinnerEvent(false)
+    }
+
+    /*********************************************************************** */
+    const BringEvents = async () => {
+        setSpinnerEvent(true)
+        try {
+            const events = await axios({
+                method: "get",
+                url: `${URL_SERVER}/events/get`,
+                headers: {
+                    'x-access-token': SCHOOL_TENANT
                 }
-            } catch (error) {
+            })
+            if (events.data.success) {
+                setAllEvents(events.data.response.docs)
                 setSpinnerEvent(false)
+                console.log(events)
+
+            } else {
                 setAllEvents([])
+                setSpinnerEvent(false)
             }
-    
+        } catch (error) {
+            setSpinnerEvent(false)
+            setAllEvents([])
         }
 
-        const BringAllVideos = async () => {
-            setSpinnerVideos(true)
-            const urlVideos = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCt_FpZJ-Kg-7DquVV2hvVJQ&maxResults=100&order=date&key=AIzaSyAhh6VqpXvhmvrxF-GRLRlJfL37sgJp-K4" 
-            try {
-                const events = await axios({
-                    method: "get",
-                    url: `${urlVideos}`
-                })
-                //console.log(events.data.items)
-                if (events.data.items) {
-                    setAllVideos(events.data.items)
-                    setSpinnerVideos(false)
-                    //console.log(events)
-    
-                } else {
-                    setAllVideos([])
-                    setSpinnerVideos(false)
+    }
+
+    const BringAllVideos = async () => {
+        setSpinnerVideos(true)
+        const urlVideos = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCt_FpZJ-Kg-7DquVV2hvVJQ&maxResults=100&order=date&key=AIzaSyAhh6VqpXvhmvrxF-GRLRlJfL37sgJp-K4"
+        try {
+            const events = await axios({
+                method: "get",
+                url: `${urlVideos}`,
+                headers: {
+                    'x-access-token': SCHOOL_TENANT
                 }
-            } catch (error) {
+            })
+            //console.log(events.data.items)
+            if (events.data.items) {
+                setAllVideos(events.data.items)
                 setSpinnerVideos(false)
+                //console.log(events)
+
+            } else {
                 setAllVideos([])
-    
+                setSpinnerVideos(false)
             }
-    
+        } catch (error) {
+            setSpinnerVideos(false)
+            setAllVideos([])
+
         }
+
+    }
     return (
-        <AppContext.Provider value={{ 
+        <AppContext.Provider value={{
             dispatch,
             dataEvent: state.dataEvent,//data del evento al hacer click
             BringPerson,
@@ -134,16 +146,16 @@ export default (props) => {
             BringAllVideos,
             allPerson: allPerson,
             spinnerPerson: spinnerPerson,
-            allProfes:allProfes,
-            spinnerProfes:spinnerProfes,
+            allProfes: allProfes,
+            spinnerProfes: spinnerProfes,
             BringEvents,
-            allEvents:allEvents,
-            spinnerEvent:spinnerEvent,
-            dataEvent:state.dataEvent,
-            spinnerVideos:spinnerVideos,
-            allVideos:allVideos,
-            IdVideo:state.IdVideo,
-            
+            allEvents: allEvents,
+            spinnerEvent: spinnerEvent,
+            dataEvent: state.dataEvent,
+            spinnerVideos: spinnerVideos,
+            allVideos: allVideos,
+            IdVideo: state.IdVideo,
+
         }}>
             {props.children}
         </AppContext.Provider>

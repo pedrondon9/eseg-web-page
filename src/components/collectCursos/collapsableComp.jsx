@@ -5,6 +5,7 @@ import "./collectionCursos.css"
 
 
 function CollapsableComp({ datos, id }) {
+  
   useEffect(() => {
     const collap = document.querySelector(`.${id.slice(0,3)}`)
     M.Collapsible.init(collap, {
@@ -12,6 +13,7 @@ function CollapsableComp({ datos, id }) {
       inDuration: 150,
     })
   })
+
   return (
     <div className='conatainer-collapsable-p'>
       <div className='conatainer-collapsable-p-resp'>
