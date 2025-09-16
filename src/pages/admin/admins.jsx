@@ -43,7 +43,7 @@ function Admins() {
                                                     {/* <img src={x.imagen1} alt="" /> */}
                                                     <LazyLoadImage
                                                         effect="black-and-white"
-                                                        src={x.linkPhoto}
+                                                        src={x.linkPhoto?x.linkPhoto:'https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok='}
                                                     />
                                                 </div>
                                                 <div className='admin-card-text'>
