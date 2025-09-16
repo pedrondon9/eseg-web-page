@@ -1,7 +1,7 @@
 
 import Auth from './contexts/Auth';
 import './App.css';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes, HashRouter } from 'react-router-dom';
 import Home from './pages/home/home';
 import HommeLazi from './pageLazy/hommeLazi';
 import Erroraa from './components/401Error/error401';
@@ -29,7 +29,7 @@ import Especialidades from './pages/especia/especialidades';
 function App() {
   return (
     <Auth>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route exact path="/" element={<HommeLazi/>} />
           <Route exact path="/tecno" element={<Tecno/>} />
@@ -53,7 +53,7 @@ function App() {
           <Route exact path="/ccecono" element={<CcEcono/>} />
           <Route exact path="/wafsfsfsfsfsfsfsf" element={<Erroraa/>}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Auth>
   );
 }

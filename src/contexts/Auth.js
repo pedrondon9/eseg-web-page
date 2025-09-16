@@ -32,7 +32,7 @@ export default (props) => {
                 method: "get",
                 url: `${URL_SERVER}/users/get_web/admin`,
                 headers: {
-                    'x-access-token': SCHOOL_TENANT
+                    'x-tenant-id': SCHOOL_TENANT
                 }
             })
             console.log(events)
@@ -62,7 +62,7 @@ export default (props) => {
                 method: "get",
                 url: `${URL_SERVER}/users/get_web/teacher`,
                 headers: {
-                    'x-access-token': SCHOOL_TENANT
+                    'x-tenant-id': SCHOOL_TENANT
                 }
             })
             if (events.data.success) {
@@ -90,7 +90,7 @@ export default (props) => {
                 method: "get",
                 url: `${URL_SERVER}/events/get`,
                 headers: {
-                    'x-access-token': SCHOOL_TENANT
+                    'x-tenant-id': SCHOOL_TENANT
                 }
             })
             if (events.data.success) {
@@ -116,9 +116,6 @@ export default (props) => {
             const events = await axios({
                 method: "get",
                 url: `${urlVideos}`,
-                headers: {
-                    'x-access-token': SCHOOL_TENANT
-                }
             })
             //console.log(events.data.items)
             if (events.data.items) {
