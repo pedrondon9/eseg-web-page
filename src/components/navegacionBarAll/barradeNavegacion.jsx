@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 //import '../../styles/BarradeNavegacion.css'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Side from "./sideNav"
 import { BsListUl } from "react-icons/bs";
 
@@ -15,7 +15,11 @@ const BarradeNavegacion = ({ history }) => {
 
     //funcion para llamar a los submenus
 
+    const location = useLocation();
+
     const CallSubMenu = (sub) => {
+
+
 
         for (let i = 1; i < 12; i++) {
             if (i === sub) {
@@ -34,6 +38,9 @@ const BarradeNavegacion = ({ history }) => {
 
         }
     }
+
+    const current = location.pathname;
+
     return (
 
 
@@ -53,6 +60,7 @@ const BarradeNavegacion = ({ history }) => {
                         <Link
                             to={"/"}
                             className=''
+                            style={current === "/" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
                             onMouseLeave={
                                 () => {
                                     CallSubMenu(9)
@@ -63,7 +71,11 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <Link
                             to="#!"
-                            className=''
+                            className=''                            
+                            
+                            style={["/qsomos","/eqadmision","/reglamento","/ventagas"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
+
+
                             onMouseLeave={
                                 () => {
                                     CallSubMenu(9)
@@ -81,23 +93,30 @@ const BarradeNavegacion = ({ history }) => {
                                 <Link
                                     to="/qsomos"
                                     className="collection-item"
+                                    style={current === "/qsomos" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                 >
                                     Quienes somos ?
                                 </Link>
                                 <Link
                                     to="/eqadmision"
+                                    style={current === "/eqadmision" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Requisitos para la admision
                                 </Link>
                                 <Link
                                     to="/reglamento"
+                                    style={current === "/reglamento" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Reglamento interno
                                 </Link>
                                 <Link
                                     to="/ventagas"
+                                    style={current === "/ventagas" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
                                     className="collection-item"
                                 >
                                     Ventagas
@@ -113,6 +132,8 @@ const BarradeNavegacion = ({ history }) => {
                     </div>
                     <div className="link-nav-sticky">
                         <Link to={"/especialidades"}
+                            style={current === "/especialidades" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
+
                             className=''
                             onMouseLeave={
                                 () => {
@@ -260,6 +281,7 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <Link
                             to="/cursos"
+                            style={current === "/cursos" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
                             className=''
                             onMouseLeave={
                                 () => {
@@ -345,6 +367,8 @@ const BarradeNavegacion = ({ history }) => {
                         <Link
                             to="#!"
                             className=''
+                            style={["/administracion","/profesores"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
+
                             onMouseLeave={
                                 () => {
                                     CallSubMenu(9)
@@ -362,12 +386,16 @@ const BarradeNavegacion = ({ history }) => {
                             <div className="collection collection-1 col col4 bordes-bottom">
                                 <Link
                                     to="/administracion"
+                                    style={current === "/administracion" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Personal administrativo
                                 </Link>
                                 <Link
                                     to="/profesores"
+                                    style={current === "/profesores" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Profesores
@@ -378,6 +406,8 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <a
                             className=''
+                            style={["/allEvent","/allvideos"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
+
                             onMouseLeave={
                                 () => {
                                     CallSubMenu(9)
@@ -394,23 +424,29 @@ const BarradeNavegacion = ({ history }) => {
                             <div className="collection collection-1 col col4 bordes-bottom">
                                 <Link
                                     to="/allEvent"
+                                    style={current === "/allEvent" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Todos los eventos
                                 </Link>
                                 <Link
                                     to="/allvideos"
+                                    style={current === "/allvideos" ? { color: "#F1B900",backgroundColor:"#F1B900"} : { color: "#000" }}
+
                                     className="collection-item"
                                 >
                                     Videos de eventos
                                 </Link>
-                              
+
                             </div>
                         </div>
                     </div>
                     <div className="link-nav-sticky">
                         <Link
                             to={"/contacts"}
+                            style={current === "/contacts" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#000" }}
+
                             className=''
                             onMouseLeave={
                                 () => {
@@ -423,7 +459,7 @@ const BarradeNavegacion = ({ history }) => {
                 </div>
                 <div className="container-icon-bar">
                     <a href="#" data-target="slide-out-nav" className="icon-bar sidenav-trigger">
-                        <BsListUl size={30}/>
+                        <BsListUl size={30} />
                     </a>
                 </div>
             </div>
