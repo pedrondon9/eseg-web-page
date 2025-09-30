@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import CollectionCursos from '../../components/collectCursos/collectionCursos'
 import Footers from '../../components/footers/footers'
 import BarradeNavegacion from '../../components/navegacionBarAll/barradeNavegacion'
 import Sinav from '../../components/navegacionBarAll/sideNav'
@@ -7,12 +6,14 @@ import TextoTitulo from '../../components/textoTitle/textoTitulo'
 import "./cursoss.css"
 import { URL_SERVER } from '../../contexts/constantesVar'
 import axios from 'axios'
-import CollapsableComp from '../../components/collectCursos/collapsableComp'
 import SpinnerCargar from '../../components/spinnerCarga/spinnerCargar'
+import M from "materialize-css";
+import CollapsableComp from '../../components/tapsAndCollapComponents/collapsableComp'
 
 function Cursoss() {
   const [data, setData] = React.useState([])
   const [spinner, setSpinner] = React.useState(false)
+
   const getData = async () => {
     setSpinner(true)
     try {
@@ -35,7 +36,6 @@ function Cursoss() {
     }
 
   }
-
   useEffect(() => {
     getData()
     window.scroll({
@@ -50,28 +50,9 @@ function Cursoss() {
       <Sinav />
       <BarradeNavegacion />
 
-      {!spinner ?
-        <>
-          {data?.map((x, y) =>
-            <div key={y}>
-              <TextoTitulo texto={x.name} color="#000" />
-              <div className='conatainer-collapsable-p'>
-                <div className='conatainer-collapsable-p-resp'>
-                    {x?.courseschema ?
-                    <CollapsableComp datos={x.courseschema} id={x.name} />
-                      :
-                      <></>}
+        <CollapsableComp path={'courses'}/>
 
-                </div>
-              </div>
-            </div>
-          )}
-        </>
-        :
-        <SpinnerCargar />
-
-      }
-
+        
 
       <Footers />
     </div>
