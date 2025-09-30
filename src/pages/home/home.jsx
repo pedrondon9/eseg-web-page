@@ -30,7 +30,6 @@ function Home() {
   return (
     <>
       <Sinav />
-      <CarrouselBanner />
 
       <div className='container-home-p'>
         <BarradeNavegacion />

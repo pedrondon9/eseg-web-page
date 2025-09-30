@@ -13,9 +13,13 @@ function CarrouselH() {
         dots: true,
         responsiveClass: true,
         autoplay: true,
+        autoplayTimeout: 8000,
+        smartSpeed: 3000,
+
         nav: true,
         navClass: ["owl-prev", "owl-next"],
         loop: true,
+
         responsive: {
             0: {
                 items: 1,
@@ -55,18 +59,10 @@ function CarrouselH() {
     return (
         <section className="container-home-carrousel-p">
             <div className='container-home-carrousel-p-resp'>
-                <OwlCarousel {...options} className=" owl-theme " >
-
-                    <div className="item carrousel-home-item" >
-                        <div className='container-home-carrousel-img'>
-                            {/* <LazyLoadImage
-                                effect="black-and-white"
-                                src={"https://res.cloudinary.com/mumbex/image/upload/v1670484260/zz_ctbmp8.jpg"}
-                            /> */}
-                            <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484260/zz_ctbmp8.jpg"} />
-                        </div>
-                    </div>
-
+                <OwlCarousel {...options} className=" owl-theme "
+                    animateOut="fadeOut"
+                    animateIn="fadeIn"
+                     >
                     <div className="item carrousel-home-item" >
                         <div className='container-home-carrousel-img'>
                             {/* <LazyLoadImage
@@ -74,8 +70,29 @@ function CarrouselH() {
                                 src={"https://res.cloudinary.com/mumbex/image/upload/v1670484256/we_enspyg.jpg"}
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484256/we_enspyg.jpg"} />
+                            <div className="overlay">
+                                <h2>Bienvenido</h2>
+                                <p>Este es un subtítulo encima de la imagen</p>
+                                <button className="btn-slide">Ver más</button>
+                            </div>
                         </div>
                     </div>
+                    <div className="item carrousel-home-item" >
+                        <div className='container-home-carrousel-img'>
+                            {/* <LazyLoadImage
+                                effect="black-and-white"
+                                src={"https://res.cloudinary.com/mumbex/image/upload/v1670484260/zz_ctbmp8.jpg"}
+                            /> */}
+                            <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484260/zz_ctbmp8.jpg"} />
+                            <div className="overlay">
+                                <h2>Bienvenido</h2>
+                                <p>Este es un subtítulo encima de la imagen</p>
+                                <button className="btn-slide">Ver más</button>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div className="item carrousel-home-item" >
                         <div className='container-home-carrousel-img'>
                             {/* <LazyLoadImage
@@ -83,6 +100,11 @@ function CarrouselH() {
                                 src={"https://res.cloudinary.com/mumbex/image/upload/v1670484895/ddd_tuzsbn.jpg"}
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484895/ddd_tuzsbn.jpg"} />
+                            <div className="overlay">
+                                <h2>Bienvenido</h2>
+                                <p>Este es un subtítulo encima de la imagen</p>
+                                <button className="btn-slide">Ver más</button>
+                            </div>
                         </div>
                     </div>
                     <div className="item carrousel-home-item" >
@@ -92,15 +114,14 @@ function CarrouselH() {
                                 src={"https://res.cloudinary.com/mumbex/image/upload/v1670484267/xcx_r8nput.jpg"}
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484267/xcx_r8nput.jpg"} />
-
+                            <div className="overlay">
+                                <h2>Bienvenido</h2>
+                                <p>Este es un subtítulo encima de la imagen</p>
+                                <button className="btn-slide">Ver más</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="item carrousel-home-item" >
-                        <div className='container-home-carrousel-img'>
-                            <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484266/aw_haefsb.jpg"} />
-                        </div>
-                    </div>
                 </OwlCarousel>
             </div>
         </section>
