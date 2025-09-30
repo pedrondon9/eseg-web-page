@@ -24,7 +24,6 @@ function CollapsableComp({ path }) {
       })
       if (events.data.success) {
         setData(events.data.response)
-        console.log(events.data.response)
 
       } else {
         setData([])
@@ -101,7 +100,7 @@ function CollapsableComp({ path }) {
                       curso.courseschema?.map((item, index) => (
                         <li key={index}>
                           <div className="collapsible-header " >
-                            <span>{item.title}</span>
+                            <span>{item.title}  (Ver)</span>
                           </div>
                           <div className="collapsible-body">
                             <div className="conatainer-descricion-p">
@@ -126,7 +125,7 @@ function CollapsableComp({ path }) {
                       curso.specialties?.map((item, index) => (
                         <li key={index}>
                           <div className="collapsible-header " >
-                            <span>{item.title}</span>
+                            <span>{item.title} (Ver)</span>
                           </div>
                           <div className="collapsible-body">
                             <div className="conatainer-descricion-p">
