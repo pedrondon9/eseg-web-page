@@ -26,7 +26,7 @@ function Seccion2() {
     }, [])
     return (
         <div className='container-seccion2-p'>
-            <TextoTitulo texto="Videos" color="#fff" />
+            <TextoTitulo texto="Videos" color="#000" />
             <div className='container-seccion2-p-resp'>
                 <div className='container-seccion2-card-video'>
                     {!spinnerVideos ?
@@ -37,24 +37,25 @@ function Seccion2() {
                                         <NavLink
                                             key={y}
                                             to="/allvideos"
-                                            className='container-card-video card'
+                                            className="container-card-video"
                                             onClick={() => {
                                                 dispatch({
                                                     type: ID_VIDEOS,
-                                                    payload: x.id.videoId
-                                                })
+                                                    payload: x.id.videoId,
+                                                });
                                             }}
                                         >
-                                            <div className='card-video'>
-                                                <ReactPlayer
-                                                    url={`https://www.youtube.com/watch?v=${x.id.videoId}`}
-                                                    width={"100%"}
-                                                    height={"100%"}
-                                                    light={true}
-                                                    playIcon={<BsPlayCircleFill size={50} color="#212121" />}
-
+                                            <div className="card-video">
+                                                <img
+                                                    src={`https://img.youtube.com/vi/${x.id.videoId}/hqdefault.jpg`}
+                                                    alt={x.snippet.title}
+                                                    className="video-thumbnail"
                                                 />
+                                                <div className="play-overlay">
+                                                    <BsPlayCircleFill size={60} color="#fff" />
+                                                </div>
                                             </div>
+
                                             <div className="card-title">
                                                 <p>{x.snippet.description}</p>
                                             </div>

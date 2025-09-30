@@ -34,7 +34,6 @@ function Home() {
       <div className='container-home-p'>
         <BarradeNavegacion />
         <CarrouselH />
-        <TextoTitulo texto={"Actualidad"} color="#000" />
         <Seccion1 />
         <Seccion2 />
         <Footers />

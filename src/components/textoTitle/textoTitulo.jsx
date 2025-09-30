@@ -5,7 +5,7 @@ function TextoTitulo({texto,color}) {
   return (
     <div className='container-texto-p'>
         <div className='container-texto-p-resp'>
-            <h5 style={{color:color}}>{texto}</h5>
+            <h4 style={{color:color}}>{texto}</h4>
         </div>
     </div>
   )

@@ -7,34 +7,55 @@ import "./footers.css"
 import Suscription from './suscription';
 function Footers() {
     return (
-        <div className='container-footer-p'>
-            <Suscription />
-            <div className='conatainer-footer-link-content'>
-                <div className='conatainer-footer-link-content-resp'>
-                    <div className='conatainer-footer-contents'>
-                        <Link to="#"><FaMapMarkerAlt size={25} color="#008CAC" /> <span>Guinea Ecuatoria, Malabo</span></Link>
-                        <Link to="#"><FaMobileAlt color='#006BF5' size={25} /><span> +240 222 404 063</span></Link>
-                        <Link to="#"><FaMobileAlt color='#006BF5' size={25} /><span> +240 222 272 053</span></Link>
-                        <Link to="#"><FaMobileAlt color='#006BF5' size={25} /><span> +240 222 238 450</span></Link>
-                        <Link to="#"><HiMail color='#455a64'  size={25} /><span>esegadmisiones@gmail.com</span> </Link>
-                        <Link to="#"><FaCalendarAlt color='#33691e' size={25} /><span> Siempre disponibles</span></Link>
-                    </div>
+        <footer className="footer">
+            <div className="footer-container">
+                {/* Contacto */}
+                <div className="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Guinea Ecuatorial, Malabo</p>
+                    <p>+240 222 404 063</p>
+                    <p>+240 222 272 053</p>
+                    <p>+240 222 238 450</p>
+                    <p>esegadmisiones@gmail.com</p>
+                    <p>Siempre disponibles</p>
+                </div>
 
-                    <div className='conatainer-footer-link'>
-                        <Link className="redes-items" to="/"><AiFillYoutube color='#FF084F' size={25} /><span>youtube</span></Link>
-                        <Link className="redes-items" to="/"><FaFacebook color='#006BF5' size={25} /><span>facebook</span></Link>
-                        <Link className="redes-items" to="/"><FaTwitter color='#006BF5' size={25} /><span>twitter</span></Link>
-                    </div>
-                    <div className='conatainer-footer-menu'>
-                        <Link className="redes-items" to="/">Admisiones</Link>
-                        <Link className="redes-items" to="/">Especialidades</Link>
-                        <Link className="redes-items" to="/">Cursos</Link>
-                        <Link className="redes-items" to="/">Administracion</Link>
-                        <Link className="redes-items" to="/">Eventos</Link>
+                {/* Enlaces */}
+                <div className="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#">Admisiones</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Administración</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </div>
+
+                {/* Redes Sociales */}
+                <div className="footer-section">
+                    <h4>Síguenos</h4>
+                    <div className="social-icons">
+                        <a href="#"><i className="fab fa-facebook-f"></i></a>
+                        <a href="#"><i className="fab fa-twitter"></i></a>
+                        <a href="#"><i className="fab fa-youtube"></i></a>
                     </div>
                 </div>
+
+                {/* Newsletter */}
+                <div className="footer-section">
+                    <h4>Suscríbete</h4>
+                    <form className="newsletter">
+                        <input type="email" placeholder="Tu correo" />
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
             </div>
-        </div>
+
+            <div className="footer-bottom">
+                <p>© 2025 ESEG. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     )
 }
 

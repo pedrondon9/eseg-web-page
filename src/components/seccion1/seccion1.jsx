@@ -10,6 +10,7 @@ import SpinnerCargar from '../spinnerCarga/spinnerCargar'
 import { format, register } from 'timeago.js';
 import { FaTimes, FaTimesCircle } from 'react-icons/fa'
 import Vacios from '../vacio/vacios'
+import TextoTitulo from '../textoTitle/textoTitulo'
 
 
 function Seccion1() {
@@ -56,7 +57,9 @@ function Seccion1() {
 
     }, [])
     return (
-        <>
+        <div style={{ backgroundColor: "#f5f5f5" }}>
+            <TextoTitulo texto={"Actualidad"} color="#000" />
+
             <div className='container-seccion1-p'>
                 <div className='container-seccion1-p-resp'>
                     <div className="conatainer-seccion1 z-depth-">
@@ -66,7 +69,7 @@ function Seccion1() {
                                     <>
                                         {
                                             allEvents?.slice(0, 4).map((x, y) =>
-                                                <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='card conatainer-seccion1-l'>
+                                                <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className=' conatainer-seccion1-l'>
                                                     <div className='conatainer-seccion1-l-img'>
                                                         {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
@@ -79,14 +82,17 @@ function Seccion1() {
 
                                                     </div>
                                                     <div className='conatainer-seccion1-l-text'>
+                                                        <p to="#">
+                                                            {x.title.slice(0, 80)}.....
+                                                        </p>
                                                         <div className='conatainer-seccion1-l-text-time'>
                                                             <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
                                                             <span className='conatainer-seccion1-l-text-time-date'>{timeago(x?.createdAt)}</span>
                                                         </div>
-                                                        <p to="#">
-                                                            {x.title.slice(0, 80)}.....
-                                                        </p>
+
                                                     </div>
+                                                    <Link className ='leermas'to="#" >Leer más</Link>
+
                                                 </Link>
                                             )
                                         }
@@ -110,7 +116,7 @@ function Seccion1() {
             <div className='container-link-all-news'>
                 <Link to={"/allEvent"}><span>Ver todos los eventos</span><AiOutlineArrowRight size={30} color="#000" /> </Link>
             </div>
-        </>
+        </div>
     )
 }
 
