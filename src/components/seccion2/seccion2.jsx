@@ -37,7 +37,7 @@ function Seccion2() {
                                         <NavLink
                                             key={y}
                                             to="/allvideos"
-                                            className='container-card-video'
+                                            className='container-card-video card'
                                             onClick={() => {
                                                 dispatch({
                                                     type: ID_VIDEOS,

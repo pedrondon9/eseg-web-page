@@ -30,6 +30,7 @@
 
 .suscription-input {
     width: 40%;
+    padding: 10px;
 }
 
 .suscription-input form {
@@ -43,6 +44,7 @@
     color: #212121;
     padding-left: 5px !important;
     font-size: 18px !important;
+
 }
 
 .suscription-input form input::placeholder {
@@ -51,9 +53,12 @@
 
 .suscription-input form button {
     height: 40px;
-    background-color: #005197 !important;
+    background-color: #f5f5f5 !important;
     font-weight: 600;
     margin-left: 5px;
+    color: #000;
+    border-radius: 5px;
+
 }
 
 @media screen and (max-width:1250px) {

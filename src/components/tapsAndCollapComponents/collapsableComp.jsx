@@ -6,6 +6,7 @@ import axios from 'axios'
 import { URL_SERVER } from '../../contexts/constantesVar'
 import SpinnerCargar from '../spinnerCarga/spinnerCargar'
 import { Tabs } from "@mantine/core";
+import Vacios from '../vacio/vacios'
 
 
 function CollapsableComp({ path }) {
@@ -116,8 +117,9 @@ function CollapsableComp({ path }) {
                         </li>
                       ))
                       :
-                      <></>
-
+                      <>
+                        {curso?.specialties ? <></> : <Vacios />}
+                      </>
                     }
 
                     {curso?.specialties ?
@@ -140,7 +142,9 @@ function CollapsableComp({ path }) {
                         </li>
                       ))
                       :
-                      <></>
+                      <>
+                        {curso?.courseschema ? <></> : <Vacios />}
+                      </>
 
                     }
 

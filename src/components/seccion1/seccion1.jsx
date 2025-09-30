@@ -9,6 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import SpinnerCargar from '../spinnerCarga/spinnerCargar'
 import { format, register } from 'timeago.js';
 import { FaTimes, FaTimesCircle } from 'react-icons/fa'
+import Vacios from '../vacio/vacios'
 
 
 function Seccion1() {
@@ -61,88 +62,39 @@ function Seccion1() {
                     <div className="conatainer-seccion1 z-depth-">
                         {!spinnerEvent ?
                             <>
-                                {allEvents[0] ?
-                                    <Link to={`/verEvent/${allEvents[0]._id}`} onClick={() => { DataEvent(allEvents[0]) }} className='conatainer-seccion1-l'>
-                                        <div className='conatainer-seccion1-l-img'>
-                                            {/* <img src={allEvents[0].imagen1} alt="" /> */}
+                                {allEvents ?
+                                    <>
+                                        {
+                                            allEvents?.slice(0, 4).map((x, y) =>
+                                                <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='card conatainer-seccion1-l'>
+                                                    <div className='conatainer-seccion1-l-img'>
+                                                        {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
-                                            <LazyLoadImage
+                                                        <LazyLoadImage
 
-                                                effect="black-and-white"
-                                                src={allEvents[0]?.linkPhoto}
-                                            />
+                                                            effect="black-and-white"
+                                                            src={x.linkPhoto}
+                                                        />
 
 
-                                        </div>
-                                        <div className='conatainer-seccion1-l-text'>
-                                        <div className='conatainer-seccion1-l-text-time'>
-                                                <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[0]?.createdAt)}</span>
-                                            </div>
-                                            <p to="#">
-                                                {allEvents[0]?.title.slice(0, 80)}.....
-                                            </p>
-                                        </div>
-                                    </Link>
+                                                    </div>
+                                                    <div className='conatainer-seccion1-l-text'>
+                                                        <div className='conatainer-seccion1-l-text-time'>
+                                                            <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
+                                                            <span className='conatainer-seccion1-l-text-time-date'>{timeago(x?.createdAt)}</span>
+                                                        </div>
+                                                        <p to="#">
+                                                            {x.title.slice(0, 80)}.....
+                                                        </p>
+                                                    </div>
+                                                </Link>
+                                            )
+                                        }
+                                    </>
                                     :
-                                    <></>
+                                    <Vacios />
                                 }
 
-                                {allEvents[1] ?
-                                    <Link to={`/verEvent/${allEvents[1]._id}`} onClick={() => { DataEvent(allEvents[1]) }} className='conatainer-seccion1-l'>
-                                        <div className='conatainer-seccion1-l-img'>
-                                            {/* <img src={allEvents[1].imagen1} alt="" /> */}
-
-                                            <LazyLoadImage
-
-                                                effect="black-and-white"
-                                                src={allEvents[1].linkPhoto}
-                                            />
-
-
-                                        </div>
-                                        <div className='conatainer-seccion1-l-text'>
-                                            <div className='conatainer-seccion1-l-text-time'>
-                                                <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[1]?.createdAt)}</span>
-                                            </div>
-                                            <p to="#">
-                                                {allEvents[1].title.slice(0, 80)}.....
-                                            </p>
-                                        </div>
-                                    </Link>
-                                    :
-                                    <></>
-                                }
-
-
-                                {allEvents[2] ?
-                                    <Link to={`/verEvent/${allEvents[2]._id}`}  onClick={() => { DataEvent(allEvents[2]) }} className='conatainer-seccion1-l'>
-                                        <div className='conatainer-seccion1-l-img'>
-                                            {/* <img src={allEvents[2].imagen1} alt="" /> */}
-
-                                            <LazyLoadImage
-
-                                                effect="black-and-white"
-                                                src={allEvents[2]?.linkPhoto}
-                                            />
-
-                                        </div>
-                                        <div className='conatainer-seccion1-l-text'>
-                                            <div className='conatainer-seccion1-l-text-time'>
-                                                <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[2].createdAt)}</span>
-                                            </div>
-                                            <p to="#">
-                                                {allEvents[2]?.title?.slice(0, 100)}.....
-                                            </p>
-
-
-                                        </div>
-                                    </Link>
-                                    :
-                                    <></>
-                                }
 
                             </>
                             :

@@ -106,7 +106,7 @@ function AllEvent() {
                                 {allEvents[0] ?
                                     <>
                                         {allEvents.map((x, y) =>
-                                            <Link to={`/verEvent/${x._id}`} key={x._id} onClick={() => { DataEvent(x) }} className='conatainer-seccion-card-all-event'>
+                                            <Link to={`/verEvent/${x._id}`} key={x._id} onClick={() => { DataEvent(x) }} className='card conatainer-seccion-card-all-event'>
                                                 <div className='conatainer-seccion-card-all-event-img'>
 
                                                     <LazyLoadImage
