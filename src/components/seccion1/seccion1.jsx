@@ -114,7 +114,7 @@ function Seccion1() {
 
             </div>
             <div className='container-link-all-news'>
-                <Link to={"/allEvent"}><span>Ver todos los eventos</span><AiOutlineArrowRight size={30} color="#000" /> </Link>
+                <Link to={"/allEvent"}><span>Ver todos los eventos</span><AiOutlineArrowRight size={25} color="#000" /> </Link>
             </div>
         </div>
     )

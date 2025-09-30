@@ -74,58 +74,6 @@ function Seccion2() {
                         </>
                     }
 
-
-                    {/* <NavLink to="/wafsfsfsfsfsfsfsfsfsfs" className='container-card-video'>
-                        <div className='card-video'>
-                            <ReactPlayer
-                                url={"https://www.youtube.com/watch?v=zkOAkNXlG08"}
-                                width={"100%"}
-                                height={"100%"}
-                                light={true}
-                                playIcon={<BsPlayCircleFill size={50} color="#F3C304"/>}
-
-                            />
-                        </div>
-                        <div className="card-title">
-                            <p>Este mes se l centro de estudios globales ESEG mes se l 
-                                centro de estudios globales ESEG ste mes se l centro de tudios</p>
-                        </div>
-                    </NavLink>
-
-                    <NavLink to="/wafsfsfsfsfsfsfsfsfsfs" className='container-card-video'>
-                        <div className='card-video'>
-                            <ReactPlayer
-                                url={"https://www.youtube.com/watch?v=CCfdb0C9bCA"}
-                                width={"100%"}
-                                height={"100%"}
-                                light={true}
-                                playIcon={<BsPlayCircleFill size={50} color="#F3C304"/>}
-
-                            />
-                        </div>
-                        <div className="card-title">
-                            <p>Este mes se l centro de estudios globales ESEG mes se l 
-                                centro de estudios globales ESEG ste mes se l centro de tudios</p>
-                        </div>
-                    </NavLink>
-
-
-                    <NavLink to="/wafsfsfsfsfsfsfsfsfsfs" className='container-card-video'>
-                        <div className='card-video'>
-                            <ReactPlayer
-                                url={"https://www.youtube.com/watch?v=JmJ1WUoUIK4"}
-                                width={"100%"}
-                                height={"100%"}
-                                light={true}
-                                playIcon={<BsPlayCircleFill size={50} color="#F3C304"/>}
-
-                            />
-                        </div>
-                        <div className="card-title">
-                            <p>Este mes se l centro de estudios globales ESEG mes se l 
-                                centro de estudios globales ESEG ste mes se l centro de tudios</p>
-                        </div>
-                    </NavLink> */}
                 </div>
             </div>
             <div className='container-link-all-video'>
@@ -136,7 +84,7 @@ function Seccion2() {
                     })
                 }}
                     to={"/allvideos"}><span>Ver todos los videos</span>
-                    <AiOutlineArrowRight size={30} color="#eee" />
+                    <AiOutlineArrowRight size={25} color="#000" />
                 </Link>
             </div>
         </div>
