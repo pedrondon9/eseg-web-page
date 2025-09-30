@@ -60,7 +60,7 @@ const BarradeNavegacion = ({ history }) => {
                         <Link
                             to={"/"}
                             className=''
-                            style={current === "/" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={current === "/" ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
                             onMouseLeave={
                                 () => {
                                     CallSubMenu(9)
@@ -73,7 +73,7 @@ const BarradeNavegacion = ({ history }) => {
                             to="#!"
                             className=''                            
                             
-                            style={["/qsomos","/eqadmision","/reglamento","/ventagas"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={["/qsomos","/eqadmision","/reglamento","/ventagas"].includes(current) ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
 
 
                             onMouseLeave={
