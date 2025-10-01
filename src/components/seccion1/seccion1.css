@@ -24,7 +24,7 @@
 
 }
 
-.conatainer-seccion1-l-text {
+.conatainer-card-text {
     width: 100%;
     height:auto;
     display: flex;
@@ -38,7 +38,7 @@
     margin-top: 10px;
 }
 
-.conatainer-seccion1-l-text p {
+.conatainer-card-text p {
     color: #000;
     text-align: left;
     font-size: 21px;
@@ -48,26 +48,30 @@
 
 }
 
-.conatainer-seccion1-l-text-time{
+.conatainer-card-text-time{
     display: flex;
     flex-direction: row;
 
 }
-.conatainer-seccion1-l-text-time span{
+.conatainer-card-text-time span{
     color: #212121;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 12px;
 }
-.leermas{
+
+.container-card-more-info-link{
     margin-left: 5px;
     margin-top: 10px;
     font-size: 18px;
     color: #000;
 }
-.conatainer-seccion1-l-text-time-icon{
+.conatainer-card-text-time-icon{
    font-size: 17px;
 }
+
+
+
 
 
 .container-link-all-news{
@@ -89,15 +93,6 @@
 
 
 @media screen and (max-width:950px) {
-    .container-seccion1-p-resp{
-        width: 100%;
-
-    }
-    .conatainer-seccion1 {
-       display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
     .conatainer-card {
         width: 49%;
 
@@ -107,15 +102,6 @@
 
 
 @media screen and (max-width:550px) {
-    .container-seccion1-p-resp{
-        width: 100%;
-
-    }
-    .conatainer-seccion1 {
-       display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
     .conatainer-card {
         margin-top: 10px;
         width: 98%;

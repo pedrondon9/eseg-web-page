@@ -39,7 +39,7 @@ function Seccion2() {
                                             <NavLink
                                                 key={y}
                                                 to="/allvideos"
-                                                className="container-card-video"
+                                                className="conatainer-card"
                                                 onClick={() => {
                                                     dispatch({
                                                         type: ID_VIDEOS,
@@ -47,7 +47,7 @@ function Seccion2() {
                                                     });
                                                 }}
                                             >
-                                                <div className="card-video">
+                                                <div className="conatainer-card-img">
                                                     <img
                                                         src={`https://img.youtube.com/vi/${x.id.videoId}/hqdefault.jpg`}
                                                         alt={x.snippet.title}
@@ -58,9 +58,11 @@ function Seccion2() {
                                                     </div>
                                                 </div>
 
-                                                <div className="card-title">
+                                                <div className="conatainer-card-text">
                                                     <p>{x.snippet.description}</p>
                                                 </div>
+                                                <Link className='container-card-more-info-link' to="#" >Ver</Link>
+
                                             </NavLink>
                                         )}
 

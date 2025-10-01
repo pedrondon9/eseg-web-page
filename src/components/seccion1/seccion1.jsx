@@ -81,17 +81,17 @@ function Seccion1() {
 
 
                                                     </div>
-                                                    <div className='conatainer-seccion1-l-text'>
+                                                    <div className='conatainer-card-text'>
                                                         <p to="#">
                                                             {x.title.slice(0, 80)}.....
                                                         </p>
-                                                        <div className='conatainer-seccion1-l-text-time'>
-                                                            <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                            <span className='conatainer-seccion1-l-text-time-date'>{timeago(x?.createdAt)}</span>
+                                                        <div className='conatainer-card-text-time'>
+                                                            <span className='conatainer-card-text-time-icon'><AiOutlineFieldTime /></span>
+                                                            <span className='conatainer-card-text-time-date'>{timeago(x?.createdAt)}</span>
                                                         </div>
 
                                                     </div>
-                                                    <Link className ='leermas'to="#" >Leer más</Link>
+                                                    <Link className ='container-card-more-info-link'to="#" >Leer más</Link>
 
                                                 </Link>
                                             )

@@ -26,6 +26,14 @@
    
 }
 
+@media screen and (max-width:950px) {
+    .container-seccion-data {
+    }
+}
+
+
+
+
 
 h3,h1,h2,h4{
     font-family: 'Poppins', sans-serif !important;
