@@ -60,17 +60,17 @@ function Seccion1() {
         <div style={{ backgroundColor: "#f5f5f5" }}>
             <TextoTitulo texto={"Actualidad"} color="#000" />
 
-            <div className='container-seccion1-p'>
-                <div className='container-seccion1-p-resp'>
-                    <div className="conatainer-seccion1 z-depth-">
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
+                    <div className="container-seccion-data z-depth-">
                         {!spinnerEvent ?
                             <>
                                 {allEvents ?
                                     <>
                                         {
                                             allEvents?.slice(0, 4).map((x, y) =>
-                                                <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className=' conatainer-seccion1-l'>
-                                                    <div className='conatainer-seccion1-l-img'>
+                                                <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='conatainer-card'>
+                                                    <div className='conatainer-card-img'>
                                                         {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
                                                         <LazyLoadImage

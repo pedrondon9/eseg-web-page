@@ -25,56 +25,60 @@ function Seccion2() {
         GetAllVideos()
     }, [])
     return (
-        <div className='container-seccion2-p'>
+        <div style={{ backgroundColor: "#fff" }}>
             <TextoTitulo texto="Videos" color="#000" />
-            <div className='container-seccion2-p-resp'>
-                <div className='container-seccion2-card-video'>
-                    {!spinnerVideos ?
-                        <>
-                            {allVideos[0] ?
-                                <>
-                                    {allVideos.slice(0, 4).map((x, y) =>
-                                        <NavLink
-                                            key={y}
-                                            to="/allvideos"
-                                            className="container-card-video"
-                                            onClick={() => {
-                                                dispatch({
-                                                    type: ID_VIDEOS,
-                                                    payload: x.id.videoId,
-                                                });
-                                            }}
-                                        >
-                                            <div className="card-video">
-                                                <img
-                                                    src={`https://img.youtube.com/vi/${x.id.videoId}/hqdefault.jpg`}
-                                                    alt={x.snippet.title}
-                                                    className="video-thumbnail"
-                                                />
-                                                <div className="play-overlay">
-                                                    <BsPlayCircleFill size={60} color="#fff" />
+
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
+                    <div className='container-seccion-data'>
+                        {!spinnerVideos ?
+                            <>
+                                {allVideos[0] ?
+                                    <>
+                                        {allVideos.slice(0, 4).map((x, y) =>
+                                            <NavLink
+                                                key={y}
+                                                to="/allvideos"
+                                                className="container-card-video"
+                                                onClick={() => {
+                                                    dispatch({
+                                                        type: ID_VIDEOS,
+                                                        payload: x.id.videoId,
+                                                    });
+                                                }}
+                                            >
+                                                <div className="card-video">
+                                                    <img
+                                                        src={`https://img.youtube.com/vi/${x.id.videoId}/hqdefault.jpg`}
+                                                        alt={x.snippet.title}
+                                                        className="video-thumbnail"
+                                                    />
+                                                    <div className="play-overlay">
+                                                        <BsPlayCircleFill size={60} color="#fff" />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div className="card-title">
-                                                <p>{x.snippet.description}</p>
-                                            </div>
-                                        </NavLink>
-                                    )}
+                                                <div className="card-title">
+                                                    <p>{x.snippet.description}</p>
+                                                </div>
+                                            </NavLink>
+                                        )}
 
-                                </>
-                                :
-                                <>
-                                </>
-                            }
-                        </>
-                        :
-                        <>
-                            <SpinnerCargar color={"#fff"} />
-                        </>
-                    }
+                                    </>
+                                    :
+                                    <>
+                                    </>
+                                }
+                            </>
+                            :
+                            <>
+                                <SpinnerCargar color={"#fff"} />
+                            </>
+                        }
 
+                    </div>
                 </div>
+
             </div>
             <div className='container-link-all-video'>
                 <Link onClick={() => {

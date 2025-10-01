@@ -3,8 +3,8 @@ import "./textoT.css"
 
 function TextoTitulo({texto,color}) {
   return (
-    <div className='container-texto-p'>
-        <div className='container-texto-p-resp'>
+    <div className='container-seccion'>
+        <div className='container-seccion-resp'>
             <h4 style={{color:color}}>{texto}</h4>
         </div>
     </div>
