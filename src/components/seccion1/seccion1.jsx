@@ -70,7 +70,7 @@ function Seccion1() {
                                         {
                                             allEvents?.slice(0, 4).map((x, y) =>
                                                 <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='conatainer-card'>
-                                                    <div className='conatainer-card-img'>
+                                                    <div className='conatainer-card-img' style={{backgroundColor:"#fff"}}>
                                                         {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
                                                         <LazyLoadImage
