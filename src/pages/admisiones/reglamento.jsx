@@ -10,6 +10,8 @@ function Reglamento() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"Reglamento interno"} color="#000" />
+            <div className='admin-page'>
+            </div>
             <Footers />
         </div>
     )

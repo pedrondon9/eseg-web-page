@@ -61,7 +61,17 @@ function Seccion2() {
                                                 <div className="conatainer-card-text">
                                                     <p>{x.snippet.description}</p>
                                                 </div>
-                                                <Link className='container-card-more-info-link' to="#" >Ver</Link>
+                                                <Link
+
+                                                    onClick={() => {
+                                                        dispatch({
+                                                            type: ID_VIDEOS,
+                                                            payload: x.id.videoId,
+                                                        });
+                                                    }}
+                                                    className='container-card-more-info-link'
+                                                    to="/allvideos"
+                                                >Ver</Link>
 
                                             </NavLink>
                                         )}

@@ -4,7 +4,7 @@ import "./adminPage.css"
 
 function AdminPage() {
   return (
-    <div>
+    <div className='admin-page'>
         <BarradeNavegacion/>
     </div>
   )

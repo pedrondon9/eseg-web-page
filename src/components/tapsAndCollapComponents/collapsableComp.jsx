@@ -125,7 +125,9 @@ function CollapsableComp({ path }) {
                       curso.specialties?.map((item, index) => (
                         <li key={index}>
                           <div className="collapsible-header " >
-                            <span>{item.title} (Ver)</span>
+                            <span>{item.title}
+                              
+                            </span>
                           </div>
                           <div className="collapsible-body">
                             <div className="conatainer-descricion-p">

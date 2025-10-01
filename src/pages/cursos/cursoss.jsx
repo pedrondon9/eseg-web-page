@@ -46,13 +46,12 @@ function Cursoss() {
   }, [])
 
   return (
-    <div>
+    <div style={{backgroundColor:"#f5f5f5"}}>
       <Sinav />
       <BarradeNavegacion />
+      <TextoTitulo texto="Cursos" color="#000" />
 
-        <CollapsableComp path={'courses'}/>
-
-        
+      <CollapsableComp path={'courses'}/>
 
       <Footers />
     </div>

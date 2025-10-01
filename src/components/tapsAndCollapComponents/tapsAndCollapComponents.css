@@ -2,9 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  min-height: calc(100vh - 250px);
 }
 .conatainer-collapsable-p-resp{
-  width: 1000px;
+  width: 1200px;
 }
 .conatainer-collapsable-p-resp .collapsible{
   box-shadow: none !important;

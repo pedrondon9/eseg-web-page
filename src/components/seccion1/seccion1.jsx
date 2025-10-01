@@ -79,7 +79,6 @@ function Seccion1() {
                                                             src={x.linkPhoto}
                                                         />
 
-
                                                     </div>
                                                     <div className='conatainer-card-text'>
                                                         <p to="#">
@@ -91,7 +90,7 @@ function Seccion1() {
                                                         </div>
 
                                                     </div>
-                                                    <Link className ='container-card-more-info-link'to="#" >Leer más</Link>
+                                                    <Link className ='container-card-more-info-link'to={`/verEvent/${x._id}`} >Leer más</Link>
 
                                                 </Link>
                                             )

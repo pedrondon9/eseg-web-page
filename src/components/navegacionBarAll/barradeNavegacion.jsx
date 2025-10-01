@@ -132,7 +132,7 @@ const BarradeNavegacion = ({ history }) => {
                     </div>
                     <div className="link-nav-sticky">
                         <Link to={"/especialidades"}
-                            style={current === "/especialidades" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={current === "/especialidades" ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
 
                             className=''
                             onMouseLeave={
@@ -147,7 +147,7 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <Link
                             to="/cursos"
-                            style={current === "/cursos" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={current === "/cursos" ?{ color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
                             className=''
                             onMouseLeave={
                                 () => {
@@ -162,7 +162,7 @@ const BarradeNavegacion = ({ history }) => {
                         <Link
                             to="#!"
                             className=''
-                            style={["/administracion","/profesores"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={["/administracion","/profesores"].includes(current) ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
 
                             onMouseLeave={
                                 () => {
@@ -201,7 +201,7 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <a
                             className=''
-                            style={["/allEvent","/allvideos"].includes(current) ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={["/allEvent","/allvideos"].includes(current) ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
 
                             onMouseLeave={
                                 () => {
@@ -240,7 +240,7 @@ const BarradeNavegacion = ({ history }) => {
                     <div className="link-nav-sticky">
                         <Link
                             to={"/contacts"}
-                            style={current === "/contacts" ? { color: "#eee", backgroundColor: "#333", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
+                            style={current === "/contacts" ? { color: "#000", backgroundColor: "#F1B900", borderRadius: "5px", paddingInline: "10px",paddingBlock:"2.5px" } : { color: "#004488" }}
 
                             className=''
                             onMouseLeave={

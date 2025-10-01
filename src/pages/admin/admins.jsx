@@ -26,48 +26,50 @@ function Admins() {
 
     }, [])
     return (
-        <div>
+        <div style={{backgroundColor:"#f5f5f5"}} >
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"Personal administrativo"} color="#000" />
-            <div className='conatainer-admin-card-p'>
-                <div className='conatainer-admin-card-p-resp'>
-                    {!spinnerPerson ?
-                        <>
-                            {allPerson[0] ?
-                                <>
-                                    {
-                                        allPerson.map((x, y) =>
-                                            <div className='admin-card'>
-                                                <div className='admin-card-img'>
-                                                    {/* <img src={x.imagen1} alt="" /> */}
-                                                    <LazyLoadImage
-                                                        effect="black-and-white"
-                                                        src={x.linkPhoto?x.linkPhoto:'https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok='}
-                                                    />
+            <div className='admin-page'>
+                <div className='conatainer-admin-card-p'>
+                    <div className='conatainer-admin-card-p-resp'>
+                        {!spinnerPerson ?
+                            <>
+                                {allPerson[0] ?
+                                    <>
+                                        {
+                                            allPerson.map((x, y) =>
+                                                <div className='admin-card'>
+                                                    <div className='admin-card-img'>
+                                                        {/* <img src={x.imagen1} alt="" /> */}
+                                                        <LazyLoadImage
+                                                            effect="black-and-white"
+                                                            src={x.linkPhoto ? x.linkPhoto : 'https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok='}
+                                                        />
+                                                    </div>
+                                                    <div className='admin-card-text'>
+                                                        <h6 className='nombre'>{/*<span className="text-span-puesto">Nombre : </span>*/}{x.fullname}</h6>
+                                                        <h6 className='puesto'>{/* <span className="text-span-puesto">Puesto : </span>*/}{x.position}</h6>
+                                                        <p>{/*<span className="text-edu">Educación : </span>*/}<span className="text-edu-cont">{x.brief_description}</span></p>
+                                                    </div>
                                                 </div>
-                                                <div className='admin-card-text'>
-                                                    <h6 className='nombre'>{/*<span className="text-span-puesto">Nombre : </span>*/}{x.fullname}</h6>
-                                                    <h6 className='puesto'>{/* <span className="text-span-puesto">Puesto : </span>*/}{x.position}</h6>
-                                                    <p>{/*<span className="text-edu">Educación : </span>*/}<span className="text-edu-cont">{x.brief_description}</span></p>
-                                                </div>
-                                            </div>
-                                        )
-                                    }
-                                </>
-                                :
-                                <Vacios />
+                                            )
+                                        }
+                                    </>
+                                    :
+                                    <Vacios />
 
-                            }
+                                }
 
-                        </> :
-                        <>
-                            <SpinnerCargar />
-                        </>
+                            </> :
+                            <>
+                                <SpinnerCargar />
+                            </>
 
-                    }
+                        }
 
 
+                    </div>
                 </div>
             </div>
             <Footers />

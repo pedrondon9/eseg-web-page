@@ -98,32 +98,38 @@ function AllEvent() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"Todos los eventos"} color="#000" />
-            <div className='container-event-p'>
-                <div className='container-event-p-resp'>
-                    <div className='conatainer-seccion-all-event'>
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
+                    <div className="container-seccion-data z-depth-">
                         {!spinnerEvent ?
                             <>
                                 {allEvents[0] ?
                                     <>
                                         {allEvents.map((x, y) =>
-                                            <Link to={`/verEvent/${x._id}`} key={x._id} onClick={() => { DataEvent(x) }} className='card conatainer-seccion-card-all-event'>
-                                                <div className='conatainer-seccion-card-all-event-img'>
+
+                                            <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='conatainer-card'>
+                                                <div className='conatainer-card-img' style={{ backgroundColor: "#fff" }}>
+                                                    {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
                                                     <LazyLoadImage
 
                                                         effect="black-and-white"
-                                                        src={x?.linkPhoto}
+                                                        src={x.linkPhoto}
                                                     />
+
                                                 </div>
-                                                <div className='conatainer-seccion-card-all-event-text'>
-                                                    <div className='conatainer-seccion1-l-text-time'>
-                                                        <span className='conatainer-seccion1-l-text-time-icon'><AiOutlineFieldTime /></span>
-                                                        <span className='conatainer-seccion1-l-text-time-date'>{timeago(allEvents[0].createdAt)}</span>
-                                                    </div>
+                                                <div className='conatainer-card-text'>
                                                     <p to="#">
-                                                        {x?.title?.slice(0, 100)}.....
+                                                        {x.title.slice(0, 80)}.....
                                                     </p>
+                                                    <div className='conatainer-card-text-time'>
+                                                        <span className='conatainer-card-text-time-icon'><AiOutlineFieldTime /></span>
+                                                        <span className='conatainer-card-text-time-date'>{timeago(x?.createdAt)}</span>
+                                                    </div>
+
                                                 </div>
+                                                <Link className='container-card-more-info-link' to={`/verEvent/${x._id}`} >Leer más</Link>
+
                                             </Link>
                                         )}
                                     </>

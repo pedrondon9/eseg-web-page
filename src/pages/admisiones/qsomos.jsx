@@ -10,6 +10,8 @@ function Qsomos() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"¿ Quiénes somos ?"} color="#000" />
+            <div className='admin-page'>
+            </div>
             <Footers />
         </div>
     )

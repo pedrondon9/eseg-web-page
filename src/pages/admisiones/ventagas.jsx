@@ -10,6 +10,8 @@ function Ventagas() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"Ventagas"} color="#000" />
+            <div className='admin-page'>
+            </div>
             <Footers />
         </div>
     )

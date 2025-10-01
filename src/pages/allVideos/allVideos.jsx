@@ -9,6 +9,7 @@ import { BsPlayCircleFill } from 'react-icons/bs'
 import { ID_VIDEOS } from '../../contexts/constantesVar'
 import { Link, NavLink } from 'react-router-dom'
 import SpinnerCargar from '../../components/spinnerCarga/spinnerCargar'
+import TextoTitulo from '../../components/textoTitle/textoTitulo'
 
 
 function AllVideos() {
@@ -30,37 +31,44 @@ function AllVideos() {
         )
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         window.scroll({
             left: 0,
             top: 0,
             behavior: 'smooth'
         });
-    },[])
+    }, [])
 
     return (
-        <>
+        <div style={{ backgroundColor: "#f5f5f5" }}>
             <Sinav />
             <BarradeNavegacion />
-            <div className='container-all-videos-p'>
-                <div className='container-all-videos-s-respon'>
+            <TextoTitulo texto="Videos" color="#000" />
+
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
                     <div className='container-all-videos-play'>
-                        {IdVideo?
+                        {IdVideo ?
                             <VideoPlay />
                             :
                             <></>
                         }
                     </div>
+                </div>
+            </div>
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
+
                     <div className='container-all-videos-list'>
                         {!spinnerVideos ?
                             <>
                                 {allVideos[0] ?
                                     <>
-                                        {allVideos.slice(0, 4).map((x, y) =>
+                                        {allVideos.map((x, y) =>
                                             <Link
                                                 key={y}
                                                 to="#!"
-                                                style={ x.id.videoId == id ? { backgroundColor: "#212121" } : { backgroundColor: "#000000" }}
+                                                style={x.id.videoId == id ? { backgroundColor: "#212121" } : { backgroundColor: "#000000" }}
                                                 className='card-video-play'
                                                 onClick={() => {
                                                     dispatch({
@@ -100,7 +108,7 @@ function AllVideos() {
                 </div>
             </div>
             <Footers />
-        </>
+        </div>
 
     )
 }

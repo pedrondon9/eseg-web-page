@@ -1,13 +1,19 @@
+.admin-page{
+    min-height: calc(100vh - 250px);
+
+}
 .conatainer-admin-card-p{
     width: 100%;
     display: flex;
     justify-content: center;
+
 }
 .conatainer-admin-card-p-resp{
     width: 1200px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
 
 }
 
