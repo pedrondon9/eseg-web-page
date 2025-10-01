@@ -45,13 +45,13 @@ const BarradeNavegacion = ({ history }) => {
 
 
 
-        <div className="contenedor-sticky  container-fluid  barra-de-nav-scrollTop">
+        <div className="contenedor-sticky   barra-de-nav-scrollTop">
             {/* menu vertical que aparece en dispositivos moviles */}
 
             {/* fin del menu vertical  */}
 
             {/* navegacion horizontal */}
-            <div className="menu-sticky container" id="menu">
+            <div className="menu-sticky " id="menu">
                 <div className='logo-png'>
                     <Link to="/"><img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484271/axx_vlc1ai.jpg"} alt="" /></Link>
                 </div>
