@@ -71,9 +71,9 @@ function CarrouselH() {
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484256/we_enspyg.jpg"} />
                             <div className="overlay">
-                                <h2>Bienvenido</h2>
-                                <p>Este es un subtítulo encima de la imagen</p>
-                                <button className="btn-slide">Ver más</button>
+                                <h2>Bienvenid@.</h2>
+                                <p> A la Escuela Superior de Estudios Globales (ESEG).</p>
+                                <Link to={'/qsomos'} className="btn-slide btn-small">Ver más</Link>
                             </div>
                         </div>
                     </div>
@@ -85,9 +85,9 @@ function CarrouselH() {
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484260/zz_ctbmp8.jpg"} />
                             <div className="overlay">
-                                <h2>Bienvenido</h2>
-                                <p>Este es un subtítulo encima de la imagen</p>
-                                <button className="btn-slide">Ver más</button>
+                                <h2>Tu camino al éxito comienza aquí.</h2>
+                                <p>Con programas especializados en tecnología, emprendimiento y desarrollo personal.</p>
+                                <Link to={'/qsomos'} className="btn-slide btn-small">Ver más</Link>
                             </div>
                         </div>
                     </div>
@@ -101,9 +101,9 @@ function CarrouselH() {
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484895/ddd_tuzsbn.jpg"} />
                             <div className="overlay">
-                                <h2>Bienvenido</h2>
-                                <p>Este es un subtítulo encima de la imagen</p>
-                                <button className="btn-slide">Ver más</button>
+                                <h2>Formamos líderes con visión global.</h2>
+                                <p>Educación innovadora para un mundo en constante transformación.</p>
+                                <Link to={'/qsomos'} className="btn-slide btn-small">Ver más</Link>
                             </div>
                         </div>
                     </div>
@@ -115,9 +115,9 @@ function CarrouselH() {
                             /> */}
                             <img src={"https://res.cloudinary.com/mumbex/image/upload/v1670484267/xcx_r8nput.jpg"} />
                             <div className="overlay">
-                                <h2>Bienvenido</h2>
-                                <p>Este es un subtítulo encima de la imagen</p>
-                                <button className="btn-slide">Ver más</button>
+                                <h2>Conocimiento que transforma vidas.</h2>
+                                <p>ESEG combina formación académica, práctica profesional y valores humanos.</p>
+                                <Link to={'/qsomos'} className="btn-slide btn-small">Ver más</Link>
                             </div>
                         </div>
                     </div>
