@@ -98,7 +98,7 @@ function AllEvent() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto={"Todos los eventos"} color="#000" />
-            <div className='container-seccion'>
+            <div className='container-seccion min-heightt'>
                 <div className='container-seccion-resp'>
                     <div className="container-seccion-data z-depth-">
                         {!spinnerEvent ?

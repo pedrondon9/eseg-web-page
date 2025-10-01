@@ -1,3 +1,6 @@
+.min-heightt{
+    min-height: calc(100vh - 250px);
+}
 .container-all-videos-p{
     display: flex;
     justify-content: center;

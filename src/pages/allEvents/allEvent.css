@@ -1,6 +1,4 @@
-.allventBackg {
-    background-color: #eee;
-}
+
 
 .container-event-p {
     width: 100%;
@@ -8,6 +6,10 @@
     justify-content: center;
     min-height: calc(100vh - 250px);
 
+}
+
+.min-heightt {
+    min-height: calc(100vh - 250px);
 }
 
 .container-event-p-resp {
