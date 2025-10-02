@@ -1,0 +1,82 @@
+.advantages-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+.advantages-header {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.advantages-header h2 {
+    font-size: 2.5rem;
+    color: #0a3d62;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.advantages-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0;
+}
+
+.advantages-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.advantage-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-card h3 {
+    font-size: 1.3rem;
+    color: #0a3d62;
+    margin-bottom: 10px;
+}
+
+.advantage-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+
+@media screen and (max-width:1220px) {
+
+    .advantages-section {
+        width: 99%;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .advantages-header h2 {
+        font-size: 2rem;
+    }
+
+    .advantages-header p {
+        font-size: 1rem;
+    }
+
+    .advantage-card {
+        padding: 20px;
+    }
+}

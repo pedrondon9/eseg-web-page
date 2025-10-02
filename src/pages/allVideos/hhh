@@ -1,0 +1,7 @@
+                   <div className='container-all-videos-play'>
+                        {IdVideo ?
+                            <VideoPlay />
+                            :
+                            <></>
+                        }
+                    </div>

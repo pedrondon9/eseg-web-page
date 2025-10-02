@@ -4,14 +4,17 @@ import BarradeNavegacion from '../../components/navegacionBarAll/barradeNavegaci
 import Sinav from '../../components/navegacionBarAll/sideNav'
 import TextoTitulo from '../../components/textoTitle/textoTitulo'
 import "./admisiones.css"
+import AdmissionRequirements from '../../components/admissionRequirements/admissionRequirements'
 
 function EqAdmision() {
     return (
         <div >
             <Sinav />
             <BarradeNavegacion />
-            <TextoTitulo texto={"Requisitos para la admisión"} color="#000" />
+            <TextoTitulo texto={"Requisitos de Admisión"} color="#000" />
             <div className='admin-page'>
+                <AdmissionRequirements />
+
             </div>
 
 

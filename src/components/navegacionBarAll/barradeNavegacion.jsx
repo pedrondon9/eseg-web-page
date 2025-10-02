@@ -121,12 +121,7 @@ const BarradeNavegacion = ({ history }) => {
                                 >
                                     Ventagas
                                 </Link>
-                                <Link
-                                    to="#"
-                                    className="collection-item"
-                                >
-                                    Turnos
-                                </Link>
+                                
                             </div>
                         </div>
                     </div>
