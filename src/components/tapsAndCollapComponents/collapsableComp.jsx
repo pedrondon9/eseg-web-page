@@ -84,7 +84,7 @@ function CollapsableComp({ path }) {
               tabActive: "bg-blue-600 text-white rounded-lg shadow-md",
               list: "gap-1"
             }} >
-              <Tabs.List grow style={{ overflowX: "auto", flexWrap: "nowrap" }}>
+              <Tabs.List grow style={{ overflowX: "auto", flexWrap: "nowrap",marginLeft:"-2px" }}>
                 {data.map((curso, i) => (
                   <Tabs.Tab key={i} onClick={() => handleClick(curso.name)} value={curso.name} style={nameCurso === curso.name ? { backgroundColor: "#F1B900" } : {}} className='tabs-boton btn-small' >
                     {curso.name}
@@ -94,7 +94,7 @@ function CollapsableComp({ path }) {
 
               {data.map((curso, i) => (
                 <Tabs.Panel key={i} value={curso.name}>
-                  <h3>{curso.name}</h3>
+                  <h4 style={{marginLeft:"3px",fontWeight:"700",fontSize:"25px",color:'#0a3d62'}}>{curso.name}</h4>
 
                   <ul className="collapsible collapsibleData">
                     {curso?.courseschema ?
