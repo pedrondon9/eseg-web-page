@@ -7,9 +7,10 @@ import Advantages from '../../components/advantages/advantages'
 
 function Ventagas() {
     return (
-        <div>
+        <div style={{ backgroundColor: "#f5f5f5" }}>
             <Sinav />
             <BarradeNavegacion />
+            
             <TextoTitulo texto={"Ventajas de Estudiar en la E.S.E.G."} color="#000" />
             <div className='admin-page'>
                 <Advantages />

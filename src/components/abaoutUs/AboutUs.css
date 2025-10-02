@@ -27,12 +27,9 @@
   }
   
   .about-content {
-    background: #eee;
     margin-bottom: 10px;
-    padding-block: 20px;
-    padding-inline: 5px;
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #212121;
     text-align: left; /* aseguramos alineación izquierda */
   }
   
@@ -51,7 +48,7 @@
   @media screen and (max-width:1220px) {
 
     .about-section{
-        width: 99%;
+        width: 97%;
         
     }
    

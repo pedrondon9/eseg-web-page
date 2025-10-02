@@ -46,7 +46,6 @@ const Sinav = () => {
                         <Link onClick={() => { Destruir() }} to="/eqadmision" className="collection-item blue-grey-text text-darken-4 ">Requisitos para la admision</Link>
                         <Link onClick={() => { Destruir() }} to="/reglamento" className="collection-item blue-grey-text text-darken-4 ">Reglamento interno</Link>
                         <Link onClick={() => { Destruir() }} to="/ventagas" className="collection-item blue-grey-text text-darken-4 ">Ventagas</Link>
-                        <Link onClick={() => { Destruir() }} to="/vercatategoria/11" className="collection-item blue-grey-text text-darken-4 ">Turnos</Link>
                     </div>
                 </div>
             </li>

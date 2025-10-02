@@ -75,7 +75,7 @@ function CollapsableComp({ path }) {
 
 
   return (
-    <div className='conatainer-collapsable-p ' style={{ marginTop: "40px" }}>
+    <div className='conatainer-collapsable-p ' style={{ marginTop: "25px" }}>
       <div className='conatainer-collapsable-p-resp'>
         {!spinner ?
           <>
@@ -94,7 +94,7 @@ function CollapsableComp({ path }) {
 
               {data.map((curso, i) => (
                 <Tabs.Panel key={i} value={curso.name}>
-                  <h4 style={{marginLeft:"3px",fontWeight:"700",fontSize:"25px",color:'#0a3d62'}}>{curso.name}</h4>
+                  <h4 style={{marginLeft:"3px",fontWeight:"700",fontSize:"25px",color:'#0a3d62',marginBlock:"35px"}}>{curso.name}</h4>
 
                   <ul className="collapsible collapsibleData">
                     {curso?.courseschema ?
@@ -111,7 +111,6 @@ function CollapsableComp({ path }) {
                                   flexDirection: "column",
                                   backgroundColor: "#eeeeee",
                                   marginBlock:"5px",
-                                  border:"1px solid #212121",
                                   borderRadius:"5PX",
                                   padding:"10px"
                                 }}

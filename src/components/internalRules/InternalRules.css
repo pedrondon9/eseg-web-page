@@ -25,11 +25,10 @@
 }
 
 .rules-content {
-    background: #fff;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: left;
+   
 }
 
 .rules-content h3 {
@@ -68,7 +67,7 @@
 @media screen and (max-width:1220px) {
 
     .rules-section {
-        width: 99%;
+        width: 97%;
 
     }
 

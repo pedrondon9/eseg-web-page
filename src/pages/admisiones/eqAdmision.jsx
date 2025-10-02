@@ -8,15 +8,15 @@ import AdmissionRequirements from '../../components/admissionRequirements/admiss
 
 function EqAdmision() {
     return (
-        <div >
-            <Sinav />
+        <div style={{ backgroundColor: "#f5f5f5" }}>
             <BarradeNavegacion />
-            <TextoTitulo texto={"Requisitos de Admisión"} color="#000" />
-            <div className='admin-page'>
-                <AdmissionRequirements />
+            <Sinav />
 
-            </div>
+                <TextoTitulo texto={"Requisitos de Admisión"} color="#000" />
+                <div className='admin-page'>
+                    <AdmissionRequirements />
 
+                </div>
 
             <Footers />
         </div>

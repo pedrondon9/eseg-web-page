@@ -7,9 +7,10 @@ import InternalRules from '../../components/internalRules/internalRules'
 
 function Reglamento() {
     return (
-        <div>
+        <div style={{ backgroundColor: "#f5f5f5" }}>
             <Sinav />
             <BarradeNavegacion />
+            
             <TextoTitulo texto={"Reglamento interno"} color="#000" />
             <div className='admin-page'>
                 <InternalRules />

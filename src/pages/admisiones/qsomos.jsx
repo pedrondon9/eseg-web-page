@@ -10,6 +10,7 @@ function Qsomos() {
         <div style={{ backgroundColor: "#f5f5f5" }}>
             <Sinav />
             <BarradeNavegacion />
+
             <TextoTitulo texto={"¿ Quiénes somos ?"} color="#000" />
             <div className='admin-page'>
                 <AboutUs />
