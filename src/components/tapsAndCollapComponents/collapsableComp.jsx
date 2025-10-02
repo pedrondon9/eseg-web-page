@@ -7,6 +7,7 @@ import { URL_SERVER } from '../../contexts/constantesVar'
 import SpinnerCargar from '../spinnerCarga/spinnerCargar'
 import { Tabs } from "@mantine/core";
 import Vacios from '../vacio/vacios'
+import TextoTitulo from '../textoTitle/textoTitulo'
 
 
 function CollapsableComp({ path }) {
@@ -79,9 +80,9 @@ function CollapsableComp({ path }) {
         {!spinner ?
           <>
             <Tabs defaultValue={data[0]?.name} variant="outline" classNames={{
-              tab: "px-4 py-2 text-gray-600 font-medium hover:text-blue-600",
+              tab: "px-2 py-2 text-gray-600 font-medium hover:text-blue-600",
               tabActive: "bg-blue-600 text-white rounded-lg shadow-md",
-              list: "gap-2"
+              list: "gap-1"
             }} >
               <Tabs.List grow style={{ overflowX: "auto", flexWrap: "nowrap" }}>
                 {data.map((curso, i) => (
@@ -103,10 +104,16 @@ function CollapsableComp({ path }) {
                             <span>{item.title}  (Ver)</span>
                           </div>
                           <div className="collapsible-body">
-                            <div className="conatainer-descricion-p">
+                            <div className="container-seccion">
                               <div
+                                className='container-seccion-resp'
                                 style={{
-
+                                  flexDirection: "column",
+                                  backgroundColor: "#eeeeee",
+                                  marginBlock:"5px",
+                                  border:"1px solid #212121",
+                                  borderRadius:"5PX",
+                                  padding:"10px"
                                 }}
 
                                 dangerouslySetInnerHTML={{ __html: item?.description }}
@@ -126,7 +133,7 @@ function CollapsableComp({ path }) {
                         <li key={index}>
                           <div className="collapsible-header " >
                             <span>{item.title}
-                              
+
                             </span>
                           </div>
                           <div className="collapsible-body">

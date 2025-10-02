@@ -108,7 +108,7 @@ function AllEvent() {
                                         {allEvents.map((x, y) =>
 
                                             <Link key={y} to={`/verEvent/${x._id}`} onClick={() => { DataEvent(x) }} className='conatainer-card'>
-                                                <div className='conatainer-card-img' style={{ backgroundColor: "#fff" }}>
+                                                <div className='conatainer-card-img' style={{borderTop:"1px solid #e0e0e0" }}>
                                                     {/* <img src={allEvents[0].imagen1} alt="" /> */}
 
                                                     <LazyLoadImage
