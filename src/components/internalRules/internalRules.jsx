@@ -8,7 +8,7 @@ const InternalRules = () => {
         <p>
           El presente reglamento establece las normas de convivencia, derechos y deberes
           de los estudiantes, docentes y personal administrativo de la{" "}
-          <strong>Escuela Superior de Estudios de Globales (E.S.E.G.)</strong>, con el
+          <strong>Escuela Superior de Estudios Globales (E.S.E.G.)</strong>, con el
           objetivo de garantizar un ambiente académico respetuoso, seguro y propicio para el aprendizaje.
         </p>
       </div>

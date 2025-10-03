@@ -6,7 +6,7 @@ const AdmissionRequirements = () => {
     <section className="admission-section">
       <div className="admission-header">
         <p>
-          Para formar parte de la <strong>Escuela Superior de Estudios de Globales (E.S.E.G.)</strong>, 
+          Para formar parte de la <strong>Escuela Superior de Estudios Globales (E.S.E.G.)</strong>, 
           es necesario cumplir con los siguientes requisitos según el programa de estudio.
         </p>
       </div>

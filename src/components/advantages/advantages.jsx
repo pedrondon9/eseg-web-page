@@ -6,7 +6,7 @@ const Advantages = () => {
     <section className="advantages-section">
       <div className="advantages-header">
         <p>
-          En la <strong>Escuela Superior de Estudios de Guinea</strong> ofrecemos una experiencia educativa única,
+          En la <strong>Escuela Superior de Estudios Globales</strong> ofrecemos una experiencia educativa única,
           diseñada para preparar a los estudiantes con conocimientos prácticos, visión global
           y herramientas para destacar en el mundo laboral.
         </p>
