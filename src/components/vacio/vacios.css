@@ -1,4 +1,10 @@
 .container-vacio-p{
     width: 100%;
-    height: 400px;
+    min-height: 200px;
+    text-align: left;
+   
+}
+.container-vacio-p h5{
+    text-align: left;
+   
 }

@@ -97,7 +97,7 @@ function Seccion1() {
                                         }
                                     </>
                                     :
-                                    <Vacios />
+                                    <Vacios text={"Cero resultado"} />
                                 }
 
 

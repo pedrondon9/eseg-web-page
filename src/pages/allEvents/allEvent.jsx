@@ -134,7 +134,7 @@ function AllEvent() {
                                     </>
                                     :
                                     <>
-                                        <Vacios />
+                                    <Vacios text={"Cero resultado"} />
                                     </>
                                 }
 

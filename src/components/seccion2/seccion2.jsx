@@ -8,6 +8,7 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 import AppContext from '../../contexts/ServiceContext'
 import SpinnerCargar from '../spinnerCarga/spinnerCargar'
 import { ID_VIDEOS } from '../../contexts/constantesVar'
+import Vacios from '../vacio/vacios'
 
 function Seccion2() {
     const { dispatch, spinnerVideos, allVideos, BringAllVideos } = useContext(AppContext)
@@ -76,8 +77,8 @@ function Seccion2() {
 
                                     </>
                                     :
-                                    <>
-                                    </>
+                                    <Vacios text={"Cero resultado"} />
+
                                 }
                             </>
                             :

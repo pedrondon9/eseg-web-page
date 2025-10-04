@@ -45,12 +45,17 @@ function Cursoss() {
   }, [])
 
   return (
-    <div style={{backgroundColor:"#f5f5f5"}}>
+    <div style={{ backgroundColor: "#f5f5f5" }}>
       <Sinav />
       <BarradeNavegacion />
       <TextoTitulo texto="Cursos" color="#000" />
+      <div className='container-seccion'>
+        <div className='container-seccion-resp'>
+          <p style={{ fontWeight: "300" }}>Categorias</p>
 
-      <CollapsableComp path={'courses'}/>
+        </div>
+      </div>
+      <CollapsableComp path={'courses'} />
 
       <Footers />
     </div>

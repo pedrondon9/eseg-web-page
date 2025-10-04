@@ -1,9 +1,11 @@
 import React from 'react'
 import "./vacios.css"
-function Vacios() {
+function Vacios({ text }) {
   return (
-    <div className='container-vacio-p'>
-      
+    <div className='container-seccion'>
+      <div className='container-seccion-resp'>
+          <h6 >{text}</h6>
+      </div>
     </div>
   )
 }

@@ -75,7 +75,7 @@ function CollapsableComp({ path }) {
 
 
   return (
-    <div className='conatainer-collapsable-p ' style={{ marginTop: "25px" }}>
+    <div className='conatainer-collapsable-p ' style={{ marginTop: "10px" }}>
       <div className='conatainer-collapsable-p-resp'>
         {!spinner ?
           <>
@@ -84,7 +84,7 @@ function CollapsableComp({ path }) {
               tabActive: "bg-blue-600 text-white rounded-lg shadow-md",
               list: "gap-1"
             }} >
-              <Tabs.List grow style={{ overflowX: "auto", flexWrap: "nowrap",marginLeft:"-2px" }}>
+              <Tabs.List grow style={{ overflowX: "auto", flexWrap: "nowrap", marginLeft: "-2px" }}>
                 {data.map((curso, i) => (
                   <Tabs.Tab key={i} onClick={() => handleClick(curso.name)} value={curso.name} style={nameCurso === curso.name ? { backgroundColor: "#F1B900" } : {}} className='tabs-boton btn-small' >
                     {curso.name}
@@ -94,10 +94,10 @@ function CollapsableComp({ path }) {
 
               {data.map((curso, i) => (
                 <Tabs.Panel key={i} value={curso.name}>
-                  <h4 style={{marginLeft:"3px",fontWeight:"700",fontSize:"25px",color:'#0a3d62',marginBlock:"35px"}}>{curso.name}</h4>
+                  <h4 style={{ marginLeft: "3px", fontWeight: "700", fontSize: "25px", color: '#0a3d62', marginBlock: "35px" }}>{curso.name}</h4>
 
                   <ul className="collapsible collapsibleData">
-                    {curso?.courseschema ?
+                    {curso?.courseschema?.[0] ?
                       curso.courseschema?.map((item, index) => (
                         <li key={index}>
                           <div className="collapsible-header " >
@@ -110,9 +110,9 @@ function CollapsableComp({ path }) {
                                 style={{
                                   flexDirection: "column",
                                   backgroundColor: "#eeeeee",
-                                  marginBlock:"5px",
-                                  borderRadius:"5PX",
-                                  padding:"10px"
+                                  marginBlock: "5px",
+                                  borderRadius: "5PX",
+                                  padding: "10px"
                                 }}
 
                                 dangerouslySetInnerHTML={{ __html: item?.description }}
@@ -123,11 +123,11 @@ function CollapsableComp({ path }) {
                       ))
                       :
                       <>
-                        {curso?.specialties ? <></> : <Vacios />}
+                        {curso?.specialties ? <></> : <Vacios text={`Todavia no hay cursos en ${curso.name}`} />}
                       </>
                     }
 
-                    {curso?.specialties ?
+                    {curso?.specialties?.[0] ?
                       curso.specialties?.map((item, index) => (
                         <li key={index}>
                           <div className="collapsible-header " >
@@ -150,7 +150,7 @@ function CollapsableComp({ path }) {
                       ))
                       :
                       <>
-                        {curso?.courseschema ? <></> : <Vacios />}
+                        {curso?.courseschema ? <></> : <Vacios text={`Todavia no hay especilidades en ${curso.name}`} />}
                       </>
 
                     }

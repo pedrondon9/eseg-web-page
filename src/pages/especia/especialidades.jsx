@@ -53,6 +53,12 @@ function Especialidades() {
             <Sinav />
             <BarradeNavegacion />
             <TextoTitulo texto="Especialidades" color="#000" />
+            <div className='container-seccion'>
+                <div className='container-seccion-resp'>
+                <p style={{fontWeight:"300"}}>Categorias</p>
+
+                </div>
+            </div>
 
             <CollapsableComp path={'specialties'}/>
             <Footers />
