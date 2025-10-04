@@ -77,7 +77,6 @@ function AllEvent() {
     }
 
     useEffect(() => {
-        console.log(allEvents)
         //BringEvents()
         if (allEvents[0]) {
 

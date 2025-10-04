@@ -13,9 +13,7 @@ function Seccion2() {
     const { dispatch, spinnerVideos, allVideos, BringAllVideos } = useContext(AppContext)
 
     const GetAllVideos = async () => {
-        console.log(allVideos)
         if (allVideos[0]) {
-            console.log(allVideos)
         } else {
             BringAllVideos()
         }

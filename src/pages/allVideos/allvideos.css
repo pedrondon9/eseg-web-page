@@ -61,6 +61,7 @@
 .card-video-play{
     width: 290px;
     height: auto;
+    min-height: 100px;
     margin-block: 10px;
     background-color: #000;
 }

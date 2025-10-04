@@ -12,6 +12,11 @@
     font-weight: 600;
     font-size: 18px !important;
 }
+.avatar-collecion-link{
+    font-weight: 600;
+    font-size: 18px !important; 
+}
+
 #slide-out-nav .collapsible-body a {
     font-weight: 600;
     color: #000;

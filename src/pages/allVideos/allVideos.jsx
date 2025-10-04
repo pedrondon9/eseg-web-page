@@ -16,7 +16,6 @@ function AllVideos() {
     const { dispatch, spinnerVideos, allVideos, BringAllVideos, IdVideo } = useContext(AppContext)
     const [id, setId] = useState("")
 
-    console.log("id", IdVideo)
 
     const VideoPlay = () => {
         return (
@@ -32,6 +31,11 @@ function AllVideos() {
     }
 
     useEffect(() => {
+        if (allVideos[0]) {
+
+        } else {
+            BringAllVideos()
+        }
         window.scroll({
             left: 0,
             top: 0,

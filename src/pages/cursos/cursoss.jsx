@@ -23,7 +23,6 @@ function Cursoss() {
       })
       if (events.data.success) {
         setData(events.data.response)
-        console.log(events.data.response)
 
       } else {
         setData([])

@@ -9,6 +9,7 @@ function Mapa() {
     return (
         <div className='container-seccion'>
             <div className='container-seccion-resp'>
+            <div className='container-mapa-p-resp'>
                 <div className='conatainer-contactos'>
                     <div className='conatainer-contactos-link'>
                         <Link to="#"><FaMobileAlt color='#006BF5' size={30} /><span> +240 222 404 063</span></Link>
@@ -25,6 +26,7 @@ function Mapa() {
                         </iframe>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

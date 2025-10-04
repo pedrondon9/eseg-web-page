@@ -35,7 +35,6 @@ export default (props) => {
                     'x-tenant-id': SCHOOL_TENANT
                 }
             })
-            console.log(events)
             if (events.data.success) {
                 setAllPerson(events.data.response)
                 setSpinnerPerson(false)
@@ -96,7 +95,6 @@ export default (props) => {
             if (events.data.success) {
                 setAllEvents(events.data.response.docs)
                 setSpinnerEvent(false)
-                console.log(events)
 
             } else {
                 setAllEvents([])
@@ -120,17 +118,16 @@ export default (props) => {
             //console.log(events.data.items)
             if (events.data.items) {
                 setAllVideos(events.data.items)
-                setSpinnerVideos(false)
                 //console.log(events)
 
             } else {
                 setAllVideos([])
-                setSpinnerVideos(false)
             }
         } catch (error) {
-            setSpinnerVideos(false)
             setAllVideos([])
 
+        }finally{
+            setSpinnerVideos(false)
         }
 
     }
