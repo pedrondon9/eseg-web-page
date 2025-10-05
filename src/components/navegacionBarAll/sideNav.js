@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import M from 'materialize-css'
 import "./sinav.css"
 
-const styleLinkNav = { color: "#F1B900"}
+const styleLinkNav = { color: "#F1B900" }
 const Sinav = () => {
     const navRef = useRef(null);
 
@@ -43,12 +43,10 @@ const Sinav = () => {
     return (
         <ul ref={navRef} id="slide-out-nav" className="collapsible side-collap  sidenav sideNavAll">
             <li>
-                <div className="collapsible-header avatar-collecion" >
-                    <Link onClick={() => { Destruir() }} to={"/"} className="" >
-                        <span style={current === "/" ? styleLinkNav : {}}
-                        >Inicio</span>
-                    </Link>
-                </div>
+                <Link onClick={() => { Destruir() }} to={"/"} className="collapsible-header avatar-collecion" >
+                    <span style={current === "/" ? styleLinkNav : {}}
+                    >Inicio</span>
+                </Link>
                 <div className="collapsible-body">
                     <div className="collection">
 
@@ -57,7 +55,7 @@ const Sinav = () => {
             </li>
             <li>
                 <div className="collapsible-header avatar-collecion" >
-                    <span style={["/qsomos","/eqadmision","/reglamento","/ventagas"].includes(current)?styleLinkNav:{}} className=''
+                    <span style={["/qsomos", "/eqadmision", "/reglamento", "/ventagas"].includes(current) ? styleLinkNav : {}} className=''
                     >Admisiones</span>
                 </div>
                 <div className="collapsible-body">
@@ -70,12 +68,10 @@ const Sinav = () => {
                 </div>
             </li>
             <li>
-                <div className="collapsible-header avatar-collecion" >
-                    <Link onClick={() => { Destruir() }} to={"/especialidades"} className="" >
+                    <Link onClick={() => { Destruir() }} to={"/especialidades"} className="collapsible-header avatar-collecion" >
                         <span style={current === "/especialidades" ? styleLinkNav : {}}
                         >Especialidades</span>
                     </Link>
-                </div>
                 <div className="collapsible-body">
                     <div className="collection">
 
@@ -83,12 +79,10 @@ const Sinav = () => {
                 </div>
             </li>
             <li>
-                <div className="collapsible-header avatar-collecion" >
-                    <Link onClick={() => { Destruir() }} to={"/cursos"} className="" >
+                    <Link onClick={() => { Destruir() }} to={"/cursos"} className="collapsible-header avatar-collecion" >
                         <span style={current === "/cursos" ? styleLinkNav : {}}
                         >Cursos</span>
                     </Link>
-                </div>
                 <div className="collapsible-body">
                     <div className="collection">
 
@@ -97,7 +91,7 @@ const Sinav = () => {
             </li>
             <li>
                 <div className="collapsible-header avatar-collecion" >
-                    <span style={["/administracion","/profesores"].includes(current) ? styleLinkNav : {}}>Personal</span>
+                    <span style={["/administracion", "/profesores"].includes(current) ? styleLinkNav : {}}>Personal</span>
                 </div>
                 <div className="collapsible-body">
                     <div className="collection">
@@ -110,7 +104,7 @@ const Sinav = () => {
 
 
                 <div className="collapsible-header avatar-collecion" >
-                    <span style={["/allEvent","/allvideos"].includes(current)?styleLinkNav:{}}>Eventos</span>
+                    <span style={["/allEvent", "/allvideos"].includes(current) ? styleLinkNav : {}}>Eventos</span>
                 </div>
                 <div className="collapsible-body">
                     <div className="collection">
@@ -121,19 +115,17 @@ const Sinav = () => {
             </li>
             <li>
 
-                <div className="collapsible-header avatar-collecion" >
-                    <Link onClick={() => { Destruir() }} to={"/contacts"} className="" >
+                    <Link onClick={() => { Destruir() }} to={"/contacts"} className="collapsible-header avatar-collecion" >
                         <span style={current === "/contacts" ? styleLinkNav : {}}
                         >Contactos</span>
                     </Link>
-                </div>
                 <div className="collapsible-body">
                     <div className="collection">
 
                     </div>
                 </div>
             </li>
-           
+
         </ul>
     )
 }
