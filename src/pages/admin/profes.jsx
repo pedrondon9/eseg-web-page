@@ -37,7 +37,7 @@ function Profes() {
 
                         {!spinnerProfes ?
                             <>
-                                {allProfes[0] ?
+                                {allProfes?.[0] ?
                                     <>
                                         {
                                             allProfes.map((x, y) =>
@@ -55,7 +55,7 @@ function Profes() {
                                         }
                                     </>
                                     :
-                                    <Vacios />
+                                    <Vacios text={"Cero resultado"} />
 
                                 }
 

@@ -35,7 +35,7 @@ function Admins() {
                     <div className='conatainer-admin-card-p-resp'>
                         {!spinnerPerson ?
                             <>
-                                {allPerson[0] ?
+                                {allPerson?.[0] ?
                                     <>
                                         {
                                             allPerson.map((x, y) =>
@@ -57,7 +57,7 @@ function Admins() {
                                         }
                                     </>
                                     :
-                                    <Vacios />
+                                    <Vacios text={"Cero resultado"} />
 
                                 }
 

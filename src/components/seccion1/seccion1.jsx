@@ -65,7 +65,7 @@ function Seccion1() {
                     <div className="container-seccion-data z-depth-">
                         {!spinnerEvent ?
                             <>
-                                {allEvents ?
+                                {allEvents?.[0] ?
                                     <>
                                         {
                                             allEvents?.slice(0, 4).map((x, y) =>
